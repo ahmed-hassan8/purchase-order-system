@@ -210,7 +210,14 @@ function generatePDF() {
         doc.setFontSize(10);
         doc.setTextColor(255, 255, 255);
         doc.text("Ons Coffee Shop", 10, doc.internal.pageSize.height - 10);
-        doc.text("Brand Manager - Ahmed Hassan", 100, doc.internal.pageSize.height - 10);
+        doc.text("Brand Manager - Ahmed Hassan", doc.internal.pageSize.width - 10, doc.internal.pageSize.height - 10, { align: 'right' });
+
+        // Reposition Branch, Date, and User at the end of the PDF
+        doc.setFontSize(16);
+        doc.setFont("helvetica", "bold");
+        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 40);
+        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 30);
+        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 20);
 
         doc.save("purchase_order.pdf");
         resolve();
