@@ -181,9 +181,29 @@ function generatePDF() {
                     doc.text(item.unit, 70, y);
                     doc.text(item.quantity.toString(), 130, y);
                     y += 10;
+
+                    // Add small photo for each item
+                    const img = new Image();
+                    img.src = item.imageUrl;
+                    img.onload = function() {
+                        doc.addImage(img, 'JPEG', 10, y, 20, 20);
+                        y += 25;
+                        if (y > 280) {
+                            doc.addPage();
+                            y = 20;
+                        }
+                    };
                 });
             }
         }
+
+        // Add footer
+        doc.setFillColor(123, 160, 132); // Primary
+        doc.rect(0, doc.internal.pageSize.height - 20, doc.internal.pageSize.width, 20, 'F');
+        doc.setFontSize(10);
+        doc.setTextColor(255, 255, 255);
+        doc.text("Ons Coffee", 10, doc.internal.pageSize.height - 10);
+        doc.text("Brand Manager-Ahmed Hassan", 100, doc.internal.pageSize.height - 10);
 
         doc.save("purchase_order.pdf");
         resolve();
