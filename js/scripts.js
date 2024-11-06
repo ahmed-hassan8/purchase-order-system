@@ -155,6 +155,7 @@ function generatePDF() {
         doc.setFontSize(12);
         doc.setTextColor(0, 0, 0);
         const branch = document.getElementById('branch').value;
+        doc.setFont("helvetica", "bold");
         doc.text(`Branch: ${branch}`, 10, y);
         y += 10;
         doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, y);
@@ -164,6 +165,7 @@ function generatePDF() {
 
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
+        doc.setFont("helvetica", "normal");
         doc.text("Item Name", 10, y);
         doc.text("Unit", 70, y);
         doc.text("Quantity", 130, y);
@@ -193,17 +195,22 @@ function generatePDF() {
                             y = 20;
                         }
                     };
+
+                    // Add line after every item
+                    doc.setDrawColor(224, 104, 65); // Accent
+                    doc.line(10, y, 190, y);
+                    y += 5;
                 });
             }
         }
 
-        // Add footer
-        doc.setFillColor(123, 160, 132); // Primary
+        // Add bottom header
+        doc.setFillColor(70, 101, 100); // Secondary
         doc.rect(0, doc.internal.pageSize.height - 20, doc.internal.pageSize.width, 20, 'F');
         doc.setFontSize(10);
         doc.setTextColor(255, 255, 255);
-        doc.text("Ons Coffee", 10, doc.internal.pageSize.height - 10);
-        doc.text("Brand Manager-Ahmed Hassan", 100, doc.internal.pageSize.height - 10);
+        doc.text("Ons Coffee Shop", 10, doc.internal.pageSize.height - 10);
+        doc.text("Brand Manager - Ahmed Hassan", 100, doc.internal.pageSize.height - 10);
 
         doc.save("purchase_order.pdf");
         resolve();
