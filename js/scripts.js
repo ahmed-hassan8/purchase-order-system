@@ -154,14 +154,8 @@ function generatePDF() {
 
         doc.setFontSize(12);
         doc.setTextColor(0, 0, 0);
-        const branch = document.getElementById('branch').value;
         doc.setFont("helvetica", "bold");
-        doc.text(`Branch: ${branch}`, 10, y);
-        y += 10;
-        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, y);
-        y += 10;
-        doc.text(`User: ${document.getElementById('username').value}`, 10, y);
-        y += 20;
+        y += 20; // Add space for the top header
 
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
@@ -215,9 +209,11 @@ function generatePDF() {
         // Reposition Branch, Date, and User at the end of the PDF
         doc.setFontSize(16);
         doc.setFont("helvetica", "bold");
-        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 40);
-        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 30);
-        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 20);
+        doc.setTextColor(0, 0, 0); // Black color
+        const branch = document.getElementById('branch').value;
+        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 60); // Adjusted position
+        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 50); // Adjusted position
+        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 40); // Adjusted position
 
         doc.save("purchase_order.pdf");
         resolve();
