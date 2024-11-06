@@ -207,15 +207,17 @@ function generatePDF() {
         doc.text("Brand Manager - Ahmed Hassan", doc.internal.pageSize.width - 10, doc.internal.pageSize.height - 10, { align: 'right' });
 
         // Reposition Branch, Date, and User at the end of the PDF
-        doc.setFontSize(16);
+        doc.setFontSize(12); // Adjusted font size
         doc.setFont("helvetica", "bold");
         doc.setTextColor(0, 0, 0); // Black color
         const branch = document.getElementById('branch').value;
-        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 60); // Adjusted position
-        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 50); // Adjusted position
-        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 40); // Adjusted position
+        const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }).replace(/\s/g, '-');
+        const fileName = `${branch}_${date}.pdf`;
+        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 70); // Adjusted position
+        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 60); // Adjusted position
+        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 50); // Adjusted position
 
-        doc.save("purchase_order.pdf");
+        doc.save(fileName);
         resolve();
     });
 }
