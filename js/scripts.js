@@ -54,7 +54,6 @@ function switchTab(tabId) {
     });
     document.getElementById(tabId).classList.add('active');
     
-    // Update button styles
     const buttons = document.querySelectorAll('.tabs button');
     buttons.forEach(button => {
         button.classList.remove('btn-primary');
@@ -162,7 +161,14 @@ function updateInventorySection() {
     }
 }
 
-// New function to retrieve item names from displayed HTML content
+// New function to load Arabic font into jsPDF
+function loadArabicFont(doc) {
+    const arabicFontData = 'BASE64_ENCODED_ARABIC_FONT_DATA'; // Replace with actual Base64 data of Arabic font
+    doc.addFileToVFS('Amiri-Regular.ttf', arabicFontData);
+    doc.addFont('Amiri-Regular.ttf', 'Amiri', 'normal');
+}
+
+// Function to retrieve item names from displayed HTML content
 function getDisplayedItemNames() {
     const itemNames = {};
     const categories = ['mainWarehouseItems', 'filtersItems', 'cleaningItems'];
@@ -178,23 +184,26 @@ function getDisplayedItemNames() {
     return itemNames;
 }
 
+// Generate PDF with proper Arabic font support
 function generatePDF() {
     return new Promise((resolve, reject) => {
         const doc = new jspdf.jsPDF();
+        loadArabicFont(doc); // Load Arabic font
+
         let y = 20;
 
+        // Set color scheme and header text
         doc.setFillColor(123, 160, 132);
         doc.rect(0, 0, doc.internal.pageSize.width, 20, 'F');
         doc.setFontSize(18);
         doc.setTextColor(255, 255, 255);
         doc.text("Purchase Order", doc.internal.pageSize.width / 2, 15, { align: 'center' });
 
-        doc.setFontSize(12);
+        // Column headers with Arabic text
+        doc.setFontSize(14);
         doc.setTextColor(0, 0, 0);
         doc.setFont("helvetica", "bold");
         y += 20;
-
-        doc.setFontSize(14);
         doc.text("Item Name (اسم العنصر)", 10, y);
         doc.text("Unit", 70, y);
         doc.text("Quantity", 130, y);
@@ -203,17 +212,19 @@ function generatePDF() {
         doc.line(10, y, 190, y);
         y += 5;
 
-        // Use dynamically retrieved names
         const displayedItemNames = getDisplayedItemNames();
 
+        // Render items with Arabic font for names
         for (const category in selectedItems) {
             const items = selectedItems[category];
             if (Object.keys(items).length > 0) {
                 Object.values(items).forEach((item, index) => {
                     const name = displayedItemNames[`${category}Items`][index] || item.name;
 
-                    doc.setFont("helvetica", "normal");
-                    doc.text(name, 10, y);
+                    doc.setFont('Amiri', 'normal');  // Arabic font for item name
+                    doc.text(name, 10, y);            // Display item name
+
+                    doc.setFont("helvetica", "normal"); // Standard font for other fields
                     doc.text(item.unit, 70, y);
                     doc.text(item.quantity.toString(), 130, y);
                     y += 10;
@@ -225,6 +236,7 @@ function generatePDF() {
             }
         }
 
+        // Footer with branch, date, and user info
         doc.setFillColor(70, 101, 100);
         doc.rect(0, doc.internal.pageSize.height - 20, doc.internal.pageSize.width, 20, 'F');
         doc.setFontSize(10);
