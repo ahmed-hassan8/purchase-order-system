@@ -192,7 +192,7 @@ function generatePDF() {
         let y = 20;
 
         // Set color scheme
-        doc.setFillColor(123, 160, 132); // Primary
+        doc.setFillColor(123, 160, 132); // Primary color
         doc.rect(0, 0, doc.internal.pageSize.width, 20, 'F');
 
         doc.setFontSize(18);
@@ -202,12 +202,10 @@ function generatePDF() {
         doc.setFontSize(12);
         doc.setTextColor(0, 0, 0);
         doc.setFont("helvetica", "bold");
-        y += 20; // Add space for the top header
+        y += 20;
 
         doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont("helvetica", "normal");
-        doc.text("Item Name", 10, y);
+        doc.text("Item Name (اسم العنصر)", 10, y);
         doc.text("Unit", 70, y);
         doc.text("Quantity", 130, y);
         y += 10;
@@ -224,57 +222,46 @@ function generatePDF() {
             const items = selectedItems[category];
             if (Object.keys(items).length > 0) {
                 Object.values(items).forEach(item => {
-                    // Set font for Arabic and English text
-                    doc.setFont('NotoSans', 'normal');
-                    doc.text(item.name, 10, y);
-                    doc.setFont("helvetica", "normal");
+                    // Set bilingual name
+                    doc.setFont('NotoSans', 'normal');  // Arabic support font
+                    doc.text(item.name, 10, y);  // Name in Arabic and English
+                    doc.setFont("helvetica", "normal");  // English fallback for other fields
                     doc.text(item.unit, 70, y);
                     doc.text(item.quantity.toString(), 130, y);
                     y += 10;
 
-                    // Add small photo for each item
-                    const img = new Image();
-                    img.src = item.imageUrl;
-                    img.onload = function() {
-                        doc.addImage(img, 'JPEG', 10, y, 20, 20);
-                        y += 25;
-                        if (y > 280) {
-                            doc.addPage();
-                            y = 20;
-                        }
-                    };
-
                     // Add line after every item
-                    doc.setDrawColor(224, 104, 65); // Accent
+                    doc.setDrawColor(224, 104, 65);
                     doc.line(10, y, 190, y);
                     y += 5;
                 });
             }
         }
 
-        // Add bottom header
-        doc.setFillColor(70, 101, 100); // Secondary
+        // Footer
+        doc.setFillColor(70, 101, 100);
         doc.rect(0, doc.internal.pageSize.height - 20, doc.internal.pageSize.width, 20, 'F');
         doc.setFontSize(10);
         doc.setTextColor(255, 255, 255);
         doc.text("Ons Coffee Shop", 10, doc.internal.pageSize.height - 10);
         doc.text("Brand Manager - Ahmed Hassan", doc.internal.pageSize.width - 10, doc.internal.pageSize.height - 10, { align: 'right' });
 
-        // Reposition Branch, Date, and User at the end of the PDF
-        doc.setFontSize(12); // Adjusted font size
+        // Branch, Date, and User details
+        doc.setFontSize(12);
         doc.setFont("helvetica", "bold");
-        doc.setTextColor(0, 0, 0); // Black color
+        doc.setTextColor(0, 0, 0);
         const branch = document.getElementById('branch').value;
         const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }).replace(/\s/g, '-');
         const fileName = `${branch}_${date}.pdf`;
-        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 70); // Adjusted position
-        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 60); // Adjusted position
-        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 50); // Adjusted position
+        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 70);
+        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 60);
+        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 50);
 
         doc.save(fileName);
         resolve();
     });
 }
+
 
 // Function to dynamically adjust font size
 function adjustFontSize(text, maxWidth, maxFontSize, doc) {
