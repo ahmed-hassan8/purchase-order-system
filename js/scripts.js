@@ -1,9 +1,20 @@
 // Inventory data structure
 const inventoryItems = {
-    cupsLids: [
-        { id: 'cup9oz', name: '9OZ', unit: 'Carton', imageUrl: 'images/cup9oz.jpg' },
-        { id: 'cup12oz', name: '12OZ', unit: 'Carton', imageUrl: 'images/cup12oz.jpg' },
-        { id: 'lids9oz', name: 'Lids 9OZ', unit: 'Carton', imageUrl: 'images/lids9oz.jpg' }
+    mainWarehouse: [
+        { id: 'cup7oz', name: 'Cup 7OZ - كوب ورقي 7 اونص', unit: 'CTN', imageUrl: 'images/cup7oz.jpg' },
+        { id: 'cuplid7oz', name: 'Cuplid 7OZ - غطاء ورقي 7 اونص', unit: 'CTN', imageUrl: 'images/cuplid7oz.jpg' },
+        { id: 'cup9oz', name: 'Cup 9OZ - كوب ورقي 9 اونص', unit: 'CTN', imageUrl: 'images/cup9oz.jpg' },
+        { id: 'cuplid9oz', name: 'Cuplid 9OZ - غطاء ورقي 9 اونص', unit: 'CTN', imageUrl: 'images/cuplid9oz.jpg' },
+        { id: 'cup12oz', name: 'Cup 12OZ - كوب ورقي 12 اونص', unit: 'CTN', imageUrl: 'images/cup12oz.jpg' },
+        { id: 'cuplid12oz', name: 'Paper Cuplid 12OZ - غطاء ورقي 12 اونص', unit: 'CTN', imageUrl: 'images/cuplid12oz.jpg' },
+        { id: 'plasticCup12oz', name: 'Plastic cup 12OZ ONS - كوب بلاستيك 12 اونص', unit: 'CTN', imageUrl: 'images/plasticCup12oz.jpg' },
+        { id: 'plasticCuplid12oz', name: 'Plastic Paper Cuplid 12 - غطاء أكواب بلاستيك 12 اونص', unit: 'CTN', imageUrl: 'images/plasticCuplid12oz.jpg' },
+        { id: 'plasticCup16oz', name: 'Plastic cup 16OZ - كوب بلاستيك 16 اونص', unit: 'CTN', imageUrl: 'images/plasticCup16oz.jpg' },
+        { id: 'takeOutHandleBag', name: 'Take out Handle Bag - هاندل باج سفري', unit: 'CTN', imageUrl: 'images/takeOutHandleBag.jpg' },
+        { id: 'sweetTakeOutBox', name: 'Sweet Take-out Box - بوكس حلي سفري', unit: 'CTN', imageUrl: 'images/sweetTakeOutBox.jpg' },
+        { id: 'sweetDineInPlate', name: 'Sweet Dine-in Plate - طبق حلي ورقي محلي', unit: 'CTN', imageUrl: 'images/sweetDineInPlate.jpg' },
+        { id: 'takeOutSmallPacket', name: 'Take out Small Packet - باكت سفري صغير', unit: 'BKT', imageUrl: 'images/takeOutSmallPacket.jpg' },
+        { id: 'takeOutBigPacket', name: 'Take out Big Packet - باكت سفري كبير', unit: 'BKT', imageUrl: 'images/takeOutBigPacket.jpg' }
     ],
     filters: [
         { id: 'v60', name: 'V60 Filters', unit: 'Box', imageUrl: 'images/v60.jpg' },
@@ -17,12 +28,16 @@ const inventoryItems = {
 
 // Selected items storage
 const selectedItems = {
-    cupsLids: {},
+    mainWarehouse: {},
     filters: {},
     cleaning: {}
 };
 
 function login() {
+    if (!document.getElementById('branch').value || !document.getElementById('username').value) {
+        alert('Branch and Username are required!');
+        return;
+    }
     document.getElementById('loginPage').style.display = 'none';
     document.getElementById('mainPage').style.display = 'block';
     updateBranchInformation();
@@ -65,6 +80,7 @@ function addItem(category, item) {
         };
     }
     updateDisplay();
+    updateInventorySection();
 }
 
 function updateQuantity(category, itemId, delta) {
@@ -77,17 +93,19 @@ function updateQuantity(category, itemId, delta) {
             delete selectedItems[category][itemId];
         }
         updateDisplay();
+        updateInventorySection();
     }
 }
 
 function removeItem(category, itemId) {
     delete selectedItems[category][itemId];
     updateDisplay();
+    updateInventorySection();
 }
 
 function updateDisplay() {
-    // Update Cups & Lids section
-    updateCategoryDisplay('cupsLids', 'cupsLidsItems');
+    // Update Main Warehouse section
+    updateCategoryDisplay('mainWarehouse', 'mainWarehouseItems');
     // Update Filters section
     updateCategoryDisplay('filters', 'filtersItems');
     // Update Cleaning Materials section
@@ -118,6 +136,35 @@ function updateCategoryDisplay(category, containerId) {
         `;
         container.appendChild(itemElement);
     });
+}
+
+function updateInventorySection() {
+    const inventorySection = document.getElementById('inventoryTab');
+    inventorySection.innerHTML = '';
+
+    for (const category in inventoryItems) {
+        const categoryElement = document.createElement('div');
+        categoryElement.className = 'inventory-category';
+        categoryElement.innerHTML = `
+            <h3 id="${category}" class="category-title text-xl font-bold">${category.replace(/([A-Z])/g, ' $1').trim()}</h3>
+            <div class="items-grid">
+        `;
+
+        inventoryItems[category].forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'item-card';
+            itemElement.innerHTML = `
+                <img src="${item.imageUrl}" alt="${item.name}">
+                <h4 class="font-bold">${item.name}</h4>
+                <p>Unit: ${item.unit}</p>
+                <p>Quantity per Unit: ${item.quantity}</p>
+                <p>Order Point: ${item.orderPoint}</p>
+            `;
+            categoryElement.querySelector('.items-grid').appendChild(itemElement);
+        });
+
+        inventorySection.appendChild(categoryElement);
+    }
 }
 
 function submitOrder() {
@@ -169,11 +216,18 @@ function generatePDF() {
         doc.line(10, y, 190, y);
         y += 5;
 
+        // Load Arabic and English font
+        doc.addFileToVFS('NotoSans-Regular.ttf', 'BASE64_ENCODED_FONT_DATA');
+        doc.addFont('NotoSans-Regular.ttf', 'NotoSans', 'normal');
+
         for (const category in selectedItems) {
             const items = selectedItems[category];
             if (Object.keys(items).length > 0) {
                 Object.values(items).forEach(item => {
+                    // Set font for Arabic and English text
+                    doc.setFont('NotoSans', 'normal');
                     doc.text(item.name, 10, y);
+                    doc.setFont("helvetica", "normal");
                     doc.text(item.unit, 70, y);
                     doc.text(item.quantity.toString(), 130, y);
                     y += 10;
@@ -220,4 +274,15 @@ function generatePDF() {
         doc.save(fileName);
         resolve();
     });
+}
+
+// Function to dynamically adjust font size
+function adjustFontSize(text, maxWidth, maxFontSize, doc) {
+    let fontSize = maxFontSize;
+    doc.setFontSize(fontSize);
+    while (doc.getTextWidth(text) > maxWidth && fontSize > 1) {
+        fontSize -= 1;
+        doc.setFontSize(fontSize);
+    }
+    return fontSize;
 }
