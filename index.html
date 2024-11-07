@@ -17,15 +17,15 @@
             <h2 id="login" class="section-title text-2xl font-bold mb-4">Login</h2>
             <div class="form-group">
                 <label for="branch" class="block mb-2">Branch</label>
-                <select id="branch" class="w-full p-2 border rounded">
-                    <option>Select Branch</option>
-                    <option>Al-Nafl</option>
-                    <option>Aqiq</option>
+                <select id="branch" class="w-full p-2 border rounded" required>
+                    <option>Branch - الفرع</option>
+                    <option>Al-Nafl - النفل</option>
+                    <option>Aqiq - العقيق</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="username" class="block mb-2">Username</label>
-                <input type="text" id="username" class="w-full p-2 border rounded">
+                <input type="text" id="username" class="w-full p-2 border rounded" required>
             </div>
             <button onclick="login()" class="btn btn-primary w-full">Login</button>
         </div>
@@ -46,12 +46,12 @@
                 <!-- Branch info content -->
             </div>
 
-            <!-- Cups & Lids Section -->
+            <!-- Main Warehouse Section -->
             <div class="order-section">
-                <h2 class="section-title">Cups & Lids</h2>
-                <div id="cupsLidsItems" class="selected-items"></div>
-                <button onclick="showCategoryItems('cupsLids')" class="btn btn-accent">
-                    <i class="fas fa-plus mr-2"></i>Add Cups & Lids
+                <h2 class="section-title">Main Warehouse - المخزن الرئيسي</h2>
+                <div id="mainWarehouseItems" class="selected-items"></div>
+                <button onclick="showCategoryItems('mainWarehouse')" class="btn btn-accent">
+                    <i class="fas fa-plus mr-2"></i>Add Main Warehouse Items
                 </button>
             </div>
 
@@ -80,9 +80,9 @@
 
         <!-- Inventory Tab -->
         <div id="inventoryTab" class="tab-content">
-            <!-- Cups & Lids -->
+            <!-- Main Warehouse -->
             <div class="inventory-category">
-                <h3 id="cups-lids" class="category-title text-xl font-bold">Cups & Lids</h3>
+                <h3 id="main-warehouse" class="category-title text-xl font-bold">Main Warehouse - المخزن الرئيسي</h3>
                 <div class="items-grid">
                     <div class="item-card">
                         <img src="images/cup9oz.jpg" alt="9OZ">
