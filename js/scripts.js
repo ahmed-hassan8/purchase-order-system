@@ -104,11 +104,8 @@ function removeItem(category, itemId) {
 }
 
 function updateDisplay() {
-    // Update Main Warehouse section
     updateCategoryDisplay('mainWarehouse', 'mainWarehouseItems');
-    // Update Filters section
     updateCategoryDisplay('filters', 'filtersItems');
-    // Update Cleaning Materials section
     updateCategoryDisplay('cleaning', 'cleaningItems');
 }
 
@@ -157,14 +154,97 @@ function updateInventorySection() {
                 <img src="${item.imageUrl}" alt="${item.name}">
                 <h4 class="font-bold">${item.name}</h4>
                 <p>Unit: ${item.unit}</p>
-                <p>Quantity per Unit: ${item.quantity}</p>
-                <p>Order Point: ${item.orderPoint}</p>
             `;
             categoryElement.querySelector('.items-grid').appendChild(itemElement);
         });
 
         inventorySection.appendChild(categoryElement);
     }
+}
+
+// New function to retrieve item names from displayed HTML content
+function getDisplayedItemNames() {
+    const itemNames = {};
+    const categories = ['mainWarehouseItems', 'filtersItems', 'cleaningItems'];
+    
+    categories.forEach(categoryId => {
+        const categoryElement = document.getElementById(categoryId);
+        if (categoryElement) {
+            const items = categoryElement.querySelectorAll('.selected-item span');
+            itemNames[categoryId] = Array.from(items).map(item => item.innerText);
+        }
+    });
+
+    return itemNames;
+}
+
+function generatePDF() {
+    return new Promise((resolve, reject) => {
+        const doc = new jspdf.jsPDF();
+        let y = 20;
+
+        doc.setFillColor(123, 160, 132);
+        doc.rect(0, 0, doc.internal.pageSize.width, 20, 'F');
+        doc.setFontSize(18);
+        doc.setTextColor(255, 255, 255);
+        doc.text("Purchase Order", doc.internal.pageSize.width / 2, 15, { align: 'center' });
+
+        doc.setFontSize(12);
+        doc.setTextColor(0, 0, 0);
+        doc.setFont("helvetica", "bold");
+        y += 20;
+
+        doc.setFontSize(14);
+        doc.text("Item Name (اسم العنصر)", 10, y);
+        doc.text("Unit", 70, y);
+        doc.text("Quantity", 130, y);
+        y += 10;
+        doc.setDrawColor(0, 0, 0);
+        doc.line(10, y, 190, y);
+        y += 5;
+
+        // Use dynamically retrieved names
+        const displayedItemNames = getDisplayedItemNames();
+
+        for (const category in selectedItems) {
+            const items = selectedItems[category];
+            if (Object.keys(items).length > 0) {
+                Object.values(items).forEach((item, index) => {
+                    const name = displayedItemNames[`${category}Items`][index] || item.name;
+
+                    doc.setFont("helvetica", "normal");
+                    doc.text(name, 10, y);
+                    doc.text(item.unit, 70, y);
+                    doc.text(item.quantity.toString(), 130, y);
+                    y += 10;
+
+                    doc.setDrawColor(224, 104, 65);
+                    doc.line(10, y, 190, y);
+                    y += 5;
+                });
+            }
+        }
+
+        doc.setFillColor(70, 101, 100);
+        doc.rect(0, doc.internal.pageSize.height - 20, doc.internal.pageSize.width, 20, 'F');
+        doc.setFontSize(10);
+        doc.setTextColor(255, 255, 255);
+        doc.text("Ons Coffee Shop", 10, doc.internal.pageSize.height - 10);
+        doc.text("Brand Manager - Ahmed Hassan", doc.internal.pageSize.width - 10, doc.internal.pageSize.height - 10, { align: 'right' });
+
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "bold");
+        doc.setTextColor(0, 0, 0);
+        const branch = document.getElementById('branch').value;
+        const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }).replace(/\s/g, '-');
+        const fileName = `${branch}_${date}.pdf`;
+        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 70);
+        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 60);
+        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 50);
+
+        doc.save(fileName);
+        resolve();
+    });
 }
 
 function submitOrder() {
@@ -184,92 +264,4 @@ function submitOrder() {
         const whatsappUrl = `https://chat.whatsapp.com/Fyoa3jnYx1ZERYB90DkVRX?text=${encodedMessage}`;
         window.open(whatsappUrl);
     });
-}
-
-function generatePDF() {
-    return new Promise((resolve, reject) => {
-        const doc = new jspdf.jsPDF();
-        let y = 20;
-
-        // Set color scheme
-        doc.setFillColor(123, 160, 132); // Primary color
-        doc.rect(0, 0, doc.internal.pageSize.width, 20, 'F');
-
-        doc.setFontSize(18);
-        doc.setTextColor(255, 255, 255);
-        doc.text("Purchase Order", doc.internal.pageSize.width / 2, 15, { align: 'center' });
-
-        doc.setFontSize(12);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont("helvetica", "bold");
-        y += 20;
-
-        doc.setFontSize(14);
-        doc.text("Item Name (اسم العنصر)", 10, y);
-        doc.text("Unit", 70, y);
-        doc.text("Quantity", 130, y);
-        y += 10;
-
-        doc.setDrawColor(0, 0, 0);
-        doc.line(10, y, 190, y);
-        y += 5;
-
-        // Load Arabic and English font
-        doc.addFileToVFS('NotoSans-Regular.ttf', 'BASE64_ENCODED_FONT_DATA');
-        doc.addFont('NotoSans-Regular.ttf', 'NotoSans', 'normal');
-
-        for (const category in selectedItems) {
-            const items = selectedItems[category];
-            if (Object.keys(items).length > 0) {
-                Object.values(items).forEach(item => {
-                    // Set bilingual name
-                    doc.setFont('NotoSans', 'normal');  // Arabic support font
-                    doc.text(item.name, 10, y);  // Name in Arabic and English
-                    doc.setFont("helvetica", "normal");  // English fallback for other fields
-                    doc.text(item.unit, 70, y);
-                    doc.text(item.quantity.toString(), 130, y);
-                    y += 10;
-
-                    // Add line after every item
-                    doc.setDrawColor(224, 104, 65);
-                    doc.line(10, y, 190, y);
-                    y += 5;
-                });
-            }
-        }
-
-        // Footer
-        doc.setFillColor(70, 101, 100);
-        doc.rect(0, doc.internal.pageSize.height - 20, doc.internal.pageSize.width, 20, 'F');
-        doc.setFontSize(10);
-        doc.setTextColor(255, 255, 255);
-        doc.text("Ons Coffee Shop", 10, doc.internal.pageSize.height - 10);
-        doc.text("Brand Manager - Ahmed Hassan", doc.internal.pageSize.width - 10, doc.internal.pageSize.height - 10, { align: 'right' });
-
-        // Branch, Date, and User details
-        doc.setFontSize(12);
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(0, 0, 0);
-        const branch = document.getElementById('branch').value;
-        const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }).replace(/\s/g, '-');
-        const fileName = `${branch}_${date}.pdf`;
-        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 70);
-        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 60);
-        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 50);
-
-        doc.save(fileName);
-        resolve();
-    });
-}
-
-
-// Function to dynamically adjust font size
-function adjustFontSize(text, maxWidth, maxFontSize, doc) {
-    let fontSize = maxFontSize;
-    doc.setFontSize(fontSize);
-    while (doc.getTextWidth(text) > maxWidth && fontSize > 1) {
-        fontSize -= 1;
-        doc.setFontSize(fontSize);
-    }
-    return fontSize;
 }
