@@ -1,43 +1,51 @@
 // Inventory data structure
+// Updated inventory data structure
 const inventoryItems = {
-    mainWarehouse: [
-        { id: 'cup7oz', name: 'Cup 7OZ - كوب ورقي 7 اونص', unit: 'CTN', imageUrl: 'images/cup7oz.jpg' },
-        { id: 'cuplid7oz', name: 'Cuplid 7OZ - غطاء ورقي 7 اونص', unit: 'CTN', imageUrl: 'images/cuplid7oz.jpg' },
-        { id: 'cup9oz', name: 'Cup 9OZ - كوب ورقي 9 اونص', unit: 'CTN', imageUrl: 'images/cup9oz.jpg' },
-        { id: 'cuplid9oz', name: 'Cuplid 9OZ - غطاء ورقي 9 اونص', unit: 'CTN', imageUrl: 'images/cuplid9oz.jpg' },
-        { id: 'cup12oz', name: 'Cup 12OZ - كوب ورقي 12 اونص', unit: 'CTN', imageUrl: 'images/cup12oz.jpg' },
-        { id: 'cuplid12oz', name: 'Paper Cuplid 12OZ - غطاء ورقي 12 اونص', unit: 'CTN', imageUrl: 'images/cuplid12oz.jpg' },
-        { id: 'plasticCup12oz', name: 'Plastic cup 12OZ ONS - كوب بلاستيك 12 اونص', unit: 'CTN', imageUrl: 'images/plasticCup12oz.jpg' },
-        { id: 'plasticCuplid12oz', name: 'Plastic Paper Cuplid 12 - غطاء أكواب بلاستيك 12 اونص', unit: 'CTN', imageUrl: 'images/plasticCuplid12oz.jpg' },
-        { id: 'plasticCup16oz', name: 'Plastic cup 16OZ - كوب بلاستيك 16 اونص', unit: 'CTN', imageUrl: 'images/plasticCup16oz.jpg' },
-        { id: 'takeOutHandleBag', name: 'Take out Handle Bag - هاندل باج سفري', unit: 'CTN', imageUrl: 'images/takeOutHandleBag.jpg' },
-        { id: 'sweetTakeOutBox', name: 'Sweet Take-out Box - بوكس حلي سفري', unit: 'CTN', imageUrl: 'images/sweetTakeOutBox.jpg' },
-        { id: 'sweetDineInPlate', name: 'Sweet Dine-in Plate - طبق حلي ورقي محلي', unit: 'CTN', imageUrl: 'images/sweetDineInPlate.jpg' },
-        { id: 'takeOutSmallPacket', name: 'Take out Small Packet - باكت سفري صغير', unit: 'BKT', imageUrl: 'images/takeOutSmallPacket.jpg' },
-        { id: 'takeOutBigPacket', name: 'Take out Big Packet - باكت سفري كبير', unit: 'BKT', imageUrl: 'images/takeOutBigPacket.jpg' }
+    cupsLids: [
+        { id: 'cup7oz', name: 'Cup 7OZ - كوب ورقي 7 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cup7oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'cuplid7oz', name: 'Cuplid 7OZ - غطاء ورقي 7 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cuplid7oz.jpg' ,maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'cup9oz', name: 'Cup 9OZ - كوب ورقي 9 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cup9oz.jpg' ,maxQuantity: 2 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'cuplid9oz', name: 'Cuplid 9OZ - غطاء ورقي 9 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cuplid9oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'cup12oz', name: 'Cup 12OZ - كوب ورقي 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cup12oz.jpg'  ,maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'paperCupid12oz', name: 'Paper Cuplid 12OZ - غطاء ورقي 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/paperCupid12oz.jpg',maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'plasticCup12oz', name: 'Plastic cup 12OZ ONS - كوب بلاستيك 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/plasticCup12oz.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'plasticPaperCupid12', name: 'Plastic Paper Cuplid 12 - غطاء أكواب بلاستيك 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/plasticPaperCupid12.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'plasticCup16oz', name: 'Plastic cup 16OZ - كوب بلاستيك 16 اونص', unit: 'CTN | كرتون', imageUrl: 'images/plasticCup16oz.jpg',maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'takeOutHandleBag', name: 'Take out Handle Bag - هاندل باج سفري', unit: 'CTN | كرتون', imageUrl: 'images/takeOutHandleBag.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'sweetTakeOutBox', name: 'Sweet Take-out Box - بوكس حلي سفري', unit: 'CTN | كرتون', imageUrl: 'images/sweetTakeOutBox.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'sweetDineInPlate', name: 'Sweet Dine-in Plate - طبق حلي ورقي محلي', unit: 'CTN | كرتون', imageUrl: 'images/sweetDineInPlate.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'takeOutSmallPacket', name: 'Take out Small Packet - باكت سفري صغير', unit: 'BKT | باكت', imageUrl: 'images/takeOutSmallPacket.jpg',maxQuantity: 2 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'takeOutBigPacket', name: 'Take out Big Packet - باكت سفري كبير', unit: 'BKT | باكت', imageUrl: 'images/takeOutBigPacket.jpg' ,maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
     ],
     filters: [
-        { id: 'v60', name: 'V60 Filters', unit: 'Box', imageUrl: 'images/v60.jpg' },
-        { id: 'chemex', name: 'Chemex Filters', unit: 'Box', imageUrl: 'images/chemex.jpg' }
+        { id: 'v60', name: 'V60 Filters - فلاتر V60', unit: 'Box', imageUrl: 'images/v60.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'chemex', name: 'Chemex Filters - فلاتر كيميكس', unit: 'Box', imageUrl: 'images/chemex.jpg',maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' }
     ],
     cleaning: [
-        { id: 'sanitizer', name: 'Sanitizer', unit: 'Bottle', imageUrl: 'images/sanitizer.jpg' },
-        { id: 'detergent', name: 'Detergent', unit: 'Container', imageUrl: 'images/detergent.jpg' }
+        { id: 'sanitizer', name: 'Sanitizer - معقم', unit: 'Bottle', imageUrl: 'images/sanitizer.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'detergent', name: 'Detergent - منظف', unit: 'Container', imageUrl: 'images/detergent.jpg',maxQuantity: 10 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'}
     ]
 };
 
+
+
 // Selected items storage
 const selectedItems = {
-    mainWarehouse: {},
+    cupsLids: {},
     filters: {},
     cleaning: {}
 };
 
 function login() {
-    if (!document.getElementById('branch').value || !document.getElementById('username').value) {
-        alert('Branch and Username are required!');
+    const branch = document.getElementById('branch').value;
+    const username = document.getElementById('username').value;
+
+    // Validate branch and username
+    if (branch === '' || username === '') {
+        alert('Please select a branch and enter a username.');
         return;
     }
+
     document.getElementById('loginPage').style.display = 'none';
     document.getElementById('mainPage').style.display = 'block';
     updateBranchInformation();
@@ -54,6 +62,7 @@ function switchTab(tabId) {
     });
     document.getElementById(tabId).classList.add('active');
     
+    // Update button styles
     const buttons = document.querySelectorAll('.tabs button');
     buttons.forEach(button => {
         button.classList.remove('btn-primary');
@@ -79,32 +88,33 @@ function addItem(category, item) {
         };
     }
     updateDisplay();
-    updateInventorySection();
 }
 
 function updateQuantity(category, itemId, delta) {
     const item = selectedItems[category][itemId];
     if (item) {
         const newQuantity = item.quantity + delta;
-        if (newQuantity > 0) {
+        const maxQuantity = inventoryItems[category].find(i => i.id === itemId).maxQuantity;
+        if (newQuantity > 0 && newQuantity <= maxQuantity) {
             item.quantity = newQuantity;
-        } else {
-            delete selectedItems[category][itemId];
+        } else if (newQuantity > maxQuantity) {
+            alert(`Maximum quantity limit for ${item.name} is ${maxQuantity}.`);
         }
         updateDisplay();
-        updateInventorySection();
     }
 }
 
 function removeItem(category, itemId) {
     delete selectedItems[category][itemId];
     updateDisplay();
-    updateInventorySection();
 }
 
 function updateDisplay() {
-    updateCategoryDisplay('mainWarehouse', 'mainWarehouseItems');
+    // Update Cups & Lids section
+    updateCategoryDisplay('cupsLids', 'cupsLidsItems');
+    // Update Filters section
     updateCategoryDisplay('filters', 'filtersItems');
+    // Update Cleaning Materials section
     updateCategoryDisplay('cleaning', 'cleaningItems');
 }
 
@@ -116,7 +126,7 @@ function updateCategoryDisplay(category, containerId) {
         const itemElement = document.createElement('div');
         itemElement.className = 'selected-item';
         itemElement.innerHTML = `
-            <span>${item.name}</span>
+            <span class="item-name" data-image="${item.imageUrl}" data-description="${item.description}">${item.name}</span>
             <div class="quantity-control">
                 <button class="quantity-btn" onclick="updateQuantity('${category}', '${item.id}', -1)">
                     <i class="fas fa-minus"></i>
@@ -131,131 +141,42 @@ function updateCategoryDisplay(category, containerId) {
             </div>
         `;
         container.appendChild(itemElement);
-    });
-}
 
-function updateInventorySection() {
-    const inventorySection = document.getElementById('inventoryTab');
-    inventorySection.innerHTML = '';
-
-    for (const category in inventoryItems) {
-        const categoryElement = document.createElement('div');
-        categoryElement.className = 'inventory-category';
-        categoryElement.innerHTML = `
-            <h3 id="${category}" class="category-title text-xl font-bold">${category.replace(/([A-Z])/g, ' $1').trim()}</h3>
-            <div class="items-grid">
-        `;
-
-        inventoryItems[category].forEach(item => {
-            const itemElement = document.createElement('div');
-            itemElement.className = 'item-card';
-            itemElement.innerHTML = `
-                <img src="${item.imageUrl}" alt="${item.name}">
-                <h4 class="font-bold">${item.name}</h4>
-                <p>Unit: ${item.unit}</p>
-            `;
-            categoryElement.querySelector('.items-grid').appendChild(itemElement);
+        // Add click event listener to the item name
+        const itemName = itemElement.querySelector('.item-name');
+        itemName.addEventListener('click', function() {
+            showPopup(this.getAttribute('data-image'), this.getAttribute('data-description'));
         });
-
-        inventorySection.appendChild(categoryElement);
-    }
+    });
 }
 
-// New function to load Arabic font into jsPDF
-function loadArabicFont(doc) {
-    const arabicFontData = 'BASE64_ENCODED_ARABIC_FONT_DATA'; // Replace with actual Base64 data of Arabic font
-    doc.addFileToVFS('Amiri-Regular.ttf', arabicFontData);
-    doc.addFont('Amiri-Regular.ttf', 'Amiri', 'normal');
-}
+function showPopup(imageUrl, description) {
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerHTML = `
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <img src="${imageUrl}" alt="Item Image">
+            <p class="item-description">${description}</p>
+        </div>
+    `;
 
-// Function to retrieve item names from displayed HTML content
-function getDisplayedItemNames() {
-    const itemNames = {};
-    const categories = ['mainWarehouseItems', 'filtersItems', 'cleaningItems'];
-    
-    categories.forEach(categoryId => {
-        const categoryElement = document.getElementById(categoryId);
-        if (categoryElement) {
-            const items = categoryElement.querySelectorAll('.selected-item span');
-            itemNames[categoryId] = Array.from(items).map(item => item.innerText);
-        }
+    // Append the popup to the body
+    document.body.appendChild(popup);
+
+    // Display the popup
+    popup.style.display = 'flex';
+
+    // Add event listener to close the popup
+    popup.querySelector('.close-popup').addEventListener('click', function() {
+        document.body.removeChild(popup);
     });
 
-    return itemNames;
-}
-
-// Generate PDF with proper Arabic font support
-function generatePDF() {
-    return new Promise((resolve, reject) => {
-        const doc = new jspdf.jsPDF();
-        loadArabicFont(doc); // Load Arabic font
-
-        let y = 20;
-
-        // Set color scheme and header text
-        doc.setFillColor(123, 160, 132);
-        doc.rect(0, 0, doc.internal.pageSize.width, 20, 'F');
-        doc.setFontSize(18);
-        doc.setTextColor(255, 255, 255);
-        doc.text("Purchase Order", doc.internal.pageSize.width / 2, 15, { align: 'center' });
-
-        // Column headers with Arabic text
-        doc.setFontSize(14);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont("helvetica", "bold");
-        y += 20;
-        doc.text("Item Name (اسم العنصر)", 10, y);
-        doc.text("Unit", 70, y);
-        doc.text("Quantity", 130, y);
-        y += 10;
-        doc.setDrawColor(0, 0, 0);
-        doc.line(10, y, 190, y);
-        y += 5;
-
-        const displayedItemNames = getDisplayedItemNames();
-
-        // Render items with Arabic font for names
-        for (const category in selectedItems) {
-            const items = selectedItems[category];
-            if (Object.keys(items).length > 0) {
-                Object.values(items).forEach((item, index) => {
-                    const name = displayedItemNames[`${category}Items`][index] || item.name;
-
-                    doc.setFont('Amiri', 'normal');  // Arabic font for item name
-                    doc.text(name, 10, y);            // Display item name
-
-                    doc.setFont("helvetica", "normal"); // Standard font for other fields
-                    doc.text(item.unit, 70, y);
-                    doc.text(item.quantity.toString(), 130, y);
-                    y += 10;
-
-                    doc.setDrawColor(224, 104, 65);
-                    doc.line(10, y, 190, y);
-                    y += 5;
-                });
-            }
+    // Close the popup if the user clicks outside the popup content
+    popup.addEventListener('click', function(event) {
+        if (event.target === popup) {
+            document.body.removeChild(popup);
         }
-
-        // Footer with branch, date, and user info
-        doc.setFillColor(70, 101, 100);
-        doc.rect(0, doc.internal.pageSize.height - 20, doc.internal.pageSize.width, 20, 'F');
-        doc.setFontSize(10);
-        doc.setTextColor(255, 255, 255);
-        doc.text("Ons Coffee Shop", 10, doc.internal.pageSize.height - 10);
-        doc.text("Brand Manager - Ahmed Hassan", doc.internal.pageSize.width - 10, doc.internal.pageSize.height - 10, { align: 'right' });
-
-        doc.setFontSize(12);
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(0, 0, 0);
-        const branch = document.getElementById('branch').value;
-        const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }).replace(/\s/g, '-');
-        const fileName = `${branch}_${date}.pdf`;
-        doc.text(`Branch: ${branch}`, 10, doc.internal.pageSize.height - 70);
-        doc.text(`Date: ${new Date().toLocaleDateString()}`, 10, doc.internal.pageSize.height - 60);
-        doc.text(`User: ${document.getElementById('username').value}`, 10, doc.internal.pageSize.height - 50);
-
-        doc.save(fileName);
-        resolve();
     });
 }
 
@@ -275,5 +196,97 @@ function submitOrder() {
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://chat.whatsapp.com/Fyoa3jnYx1ZERYB90DkVRX?text=${encodedMessage}`;
         window.open(whatsappUrl);
+    });
+}
+
+function generatePDF() {
+    // Populate printable area with the current order details
+    const branch = document.getElementById('branch').value;
+    const username = document.getElementById('username').value;
+    const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    document.getElementById('pdfBranch').innerText = branch;
+    document.getElementById('pdfDate').innerText = `${date} - ${username}`;
+
+    // Generate item list in the printable area
+    const pdfItemsContainer = document.getElementById('pdfItems');
+    pdfItemsContainer.innerHTML = ''; // Clear previous content
+
+    // Create a table for the items
+    const table = document.createElement('table');
+    table.style.width = '100%';
+    table.style.borderCollapse = 'collapse';
+    table.style.marginBottom = '20px';
+
+    // Create table header
+    const headerRow = document.createElement('tr');
+    ['Item Name', 'Unit', 'Quantity'].forEach(headerText => {
+        const th = document.createElement('th');
+        th.style.border = '1px solid #000';
+        th.style.padding = '8px';
+        th.style.backgroundColor = '#7BA084'; // Primary Green
+        th.style.color = '#fff';
+        th.innerText = headerText;
+        headerRow.appendChild(th);
+    });
+    table.appendChild(headerRow);
+
+    // Populate table with items
+    for (const category in selectedItems) {
+        const items = selectedItems[category];
+        if (Object.keys(items).length > 0) {
+            Object.values(items).forEach(item => {
+                const row = document.createElement('tr');
+                ['name', 'unit', 'quantity'].forEach(field => {
+                    const td = document.createElement('td');
+                    td.style.border = '1px solid #000';
+                    td.style.padding = '8px';
+                    td.innerText = item[field];
+                    row.appendChild(td);
+                });
+                table.appendChild(row);
+            });
+        }
+    }
+
+    pdfItemsContainer.appendChild(table);
+
+    // Add footer
+    const footer = document.createElement('div');
+    footer.style.display = 'flex';
+    footer.style.justifyContent = 'space-between';
+    footer.style.padding = '10px';
+    footer.style.backgroundColor = '#466564'; // Secondary Green
+    footer.style.color = '#fff';
+    footer.style.fontWeight = 'lighter'; // Thinner font
+    footer.style.fontSize = '12px'; // Smaller font
+    footer.style.position = 'absolute';
+    footer.style.bottom = '0';
+    footer.style.width = '100%';
+    footer.style.left = '0';
+    footer.style.right = '0';
+
+    const leftText = document.createElement('span');
+    leftText.innerText = 'Business Manager - Ahmed Hassan | Ons Coffee';
+    leftText.style.color = '#fff'; // White color
+
+    footer.appendChild(leftText);
+
+    pdfItemsContainer.appendChild(footer);
+
+    // Display the printable area and convert it to PDF
+    const printableOrder = document.getElementById('printableOrder');
+    printableOrder.style.display = 'block';
+
+    // Use html2pdf to generate PDF
+    html2pdf(printableOrder, {
+        margin:       0.5,
+        filename:     `${branch}_${date}.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    }).then(() => {
+        // Hide the printable area after PDF generation
+        printableOrder.style.display = 'none';
     });
 }
