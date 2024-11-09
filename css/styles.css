@@ -104,3 +104,126 @@
     background-color: var(--neutral);
     border-radius: 4px;
 }
+
+/* Popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup content */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Close button */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Image inside the popup */
+.popup-content img {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Description inside the popup */
+.item-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+/* PDF Styles */
+#printableOrder {
+    font-family: 'Noto Naskh Arabic', serif;
+    padding: 20px;
+    background-color: #fff;
+    position: relative; /* Ensure footer is positioned correctly */
+}
+
+#printableOrder h2 {
+    color: #466564; /* Secondary Green */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#printableOrder p {
+    color: #466564; /* Secondary Green */
+    margin-bottom: 10px;
+}
+
+#printableOrder table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#printableOrder th, #printableOrder td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+#printableOrder th {
+    background-color: #7BA084; /* Primary Green */
+    color: #fff;
+}
+
+#printableOrder tr:nth-child(even) {
+    background-color: #D2D2D0; /* Neutral Gray */
+}
+
+/* Hover effect for item names */
+.item-name {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item-name:hover {
+    background-color: var(--primary);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Footer Styles */
+#printableOrder .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #466564; /* Secondary Green */
+    color: #fff;
+    font-weight: lighter; /* Thinner font */
+    font-size: 12px; /* Smaller font */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+#printableOrder .footer span {
+    color: #fff; /* White color */
+}
