@@ -2,28 +2,28 @@
 // Updated inventory data structure
 const inventoryItems = {
     cupsLids: [
-        { id: 'cup7oz', name: 'Cup 7OZ - كوب ورقي 7 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cup7oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'cuplid7oz', name: 'Cuplid 7OZ - غطاء ورقي 7 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cuplid7oz.jpg' ,maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'cup9oz', name: 'Cup 9OZ - كوب ورقي 9 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cup9oz.jpg' ,maxQuantity: 2 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'cuplid9oz', name: 'Cuplid 9OZ - غطاء ورقي 9 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cuplid9oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'cup12oz', name: 'Cup 12OZ - كوب ورقي 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/cup12oz.jpg'  ,maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'paperCupid12oz', name: 'Paper Cuplid 12OZ - غطاء ورقي 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/paperCupid12oz.jpg',maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'plasticCup12oz', name: 'Plastic cup 12OZ ONS - كوب بلاستيك 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/plasticCup12oz.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'plasticPaperCupid12', name: 'Plastic Paper Cuplid 12 - غطاء أكواب بلاستيك 12 اونص', unit: 'CTN | كرتون', imageUrl: 'images/plasticPaperCupid12.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'plasticCup16oz', name: 'Plastic cup 16OZ - كوب بلاستيك 16 اونص', unit: 'CTN | كرتون', imageUrl: 'images/plasticCup16oz.jpg',maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'takeOutHandleBag', name: 'Take out Handle Bag - هاندل باج سفري', unit: 'CTN | كرتون', imageUrl: 'images/takeOutHandleBag.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'sweetTakeOutBox', name: 'Sweet Take-out Box - بوكس حلي سفري', unit: 'CTN | كرتون', imageUrl: 'images/sweetTakeOutBox.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'sweetDineInPlate', name: 'Sweet Dine-in Plate - طبق حلي ورقي محلي', unit: 'CTN | كرتون', imageUrl: 'images/sweetDineInPlate.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
-        { id: 'takeOutSmallPacket', name: 'Take out Small Packet - باكت سفري صغير', unit: 'BKT | باكت', imageUrl: 'images/takeOutSmallPacket.jpg',maxQuantity: 2 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'takeOutBigPacket', name: 'Take out Big Packet - باكت سفري كبير', unit: 'BKT | باكت', imageUrl: 'images/takeOutBigPacket.jpg' ,maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'cup7oz', name: 'Cup 7OZ | كوب 7 اونص', unit: 'Carton', imageUrl: 'images/cup7oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 cups | كرتون 1000 كوب'},
+        { id: 'cuplid7oz', name: 'Cuplid 7OZ | غطاء 7 اونص', unit: 'Carton', imageUrl: 'images/cuplid7oz.jpg' ,maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'cup9oz', name: 'Cup 9OZ | كوب 9 اونص', unit: 'Carton', imageUrl: 'images/cup9oz.jpg' ,maxQuantity: 2 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'cuplid9oz', name: 'Cuplid 9OZ | غطاء 9 اونص', unit: 'Carton', imageUrl: 'images/cuplid9oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'cup12oz', name: 'Cup 12OZ | كوب 12 اونص', unit: 'Carton', imageUrl: 'images/cup12oz.jpg'  ,maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'paperCupid12oz', name: 'Paper Cuplid 12OZ | غطاء 12 اونص', unit: 'Carton', imageUrl: 'images/paperCupid12oz.jpg',maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'plasticCup12oz', name: 'Plastic cup 12OZ ONS | كوب بلاستيك 12 اونص', unit: 'Carton', imageUrl: 'images/plasticCup12oz.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'plasticPaperCupid12', name: 'Plastic Paper Cuplid 12 | غطاء أكواب بلاستيك 12 اونص', unit: 'Carton', imageUrl: 'images/plasticPaperCupid12.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'plasticCup16oz', name: 'Plastic cup 16OZ | كوب بلاستيك 16 اونص', unit: 'Carton', imageUrl: 'images/plasticCup16oz.jpg',maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'takeOutHandleBag', name: 'Take out Handle Bag | هاندل باج سفري', unit: 'Carton', imageUrl: 'images/takeOutHandleBag.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'sweetTakeOutBox', name: 'Sweet Take-out Box | بوكس حلي سفري', unit: 'Carton', imageUrl: 'images/sweetTakeOutBox.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'sweetDineInPlate', name: 'Sweet Dine-in Plate | طبق حلي ورقي محلي', unit: 'Carton', imageUrl: 'images/sweetDineInPlate.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'takeOutSmallPacket', name: 'Take out Small Packet | باكت سفري صغير', unit: 'Baket', imageUrl: 'images/takeOutSmallPacket.jpg',maxQuantity: 2 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'takeOutBigPacket', name: 'Take out Big Packet | باكت سفري كبير', unit: 'Baket', imageUrl: 'images/takeOutBigPacket.jpg' ,maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
     ],
     filters: [
-        { id: 'v60', name: 'V60 Filters - فلاتر V60', unit: 'Box', imageUrl: 'images/v60.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'chemex', name: 'Chemex Filters - فلاتر كيميكس', unit: 'Box', imageUrl: 'images/chemex.jpg',maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' }
+        { id: 'v60', name: 'V60 Filters | فلاتر V60', unit: 'Box', imageUrl: 'images/v60.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'chemex', name: 'Chemex Filters | فلاتر كيميكس', unit: 'Box', imageUrl: 'images/chemex.jpg',maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' }
     ],
     cleaning: [
-        { id: 'sanitizer', name: 'Sanitizer - معقم', unit: 'Bottle', imageUrl: 'images/sanitizer.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'detergent', name: 'Detergent - منظف', unit: 'Container', imageUrl: 'images/detergent.jpg',maxQuantity: 10 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'}
+        { id: 'sanitizer', name: 'Sanitizer | معقم', unit: 'Bottle', imageUrl: 'images/sanitizer.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
+        { id: 'detergent', name: 'Detergent | منظف', unit: 'Container', imageUrl: 'images/detergent.jpg',maxQuantity: 10 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'}
     ]
 };
 
