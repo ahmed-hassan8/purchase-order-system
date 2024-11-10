@@ -2,7 +2,6 @@
 // Updated inventory data structure
 const inventoryItems = {
     cupsLids: [
-        { id: 'cup4oz', name: 'Cup 4OZ | كوب 4 اونص', unit: 'Carton', imageUrl: 'images/cup4oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 cups | كرتون 1000 كوب'},
         { id: 'cup7oz', name: 'Cup 7OZ | كوب 7 اونص', unit: 'Carton', imageUrl: 'images/cup7oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 cups | كرتون 1000 كوب'},
         { id: 'cuplid7oz', name: 'Cuplid 7OZ | غطاء 7 اونص', unit: 'Carton', imageUrl: 'images/cuplid7oz.jpg' ,maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
         { id: 'cup9oz', name: 'Cup 9OZ | كوب 9 اونص', unit: 'Carton', imageUrl: 'images/cup9oz.jpg' ,maxQuantity: 2 , description: 'Carton = 500 Cups | كرتون 500 كوب' },
@@ -10,8 +9,9 @@ const inventoryItems = {
         { id: 'cup12oz', name: 'Cup 12OZ | كوب 12 اونص', unit: 'Carton', imageUrl: 'images/cup12oz.jpg'  ,maxQuantity: 2, description: 'Carton = 500 Cups | كرتون 500 كوب'},
         { id: 'paperCupid12oz', name: 'Paper Cuplid 12OZ | غطاء 12 اونص', unit: 'Carton', imageUrl: 'images/paperCupid12oz.jpg',maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
         { id: 'plasticCup12oz', name: 'Plastic cup 12OZ ONS | كوب بلاستيك 12 اونص', unit: 'Carton', imageUrl: 'images/plasticCup12oz.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
+        { id: 'plasticPaperCupid12', name: 'Plastic Paper Cuplid 12 | غطاء أكواب بلاستيك 12 اونص', unit: 'Carton', imageUrl: 'images/plasticPaperCupid12.jpg',maxQuantity: 2, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' },
         { id: 'plasticCup16oz', name: 'Plastic cup 16OZ | كوب بلاستيك 16 اونص', unit: 'Carton', imageUrl: 'images/plasticCup16oz.jpg',maxQuantity: 1, description: 'Carton = 1000 cups | كرتون 1000 كوب' },
-        { id: 'takeOutHandleBag', name: 'Take out Handle Bag | هاندل باج سفري', unit: 'Carton', imageUrl: 'images/takeOutHandleBag.jpg',maxQuantity: 2, description: 'Carton = 250 PCS | كرتون 250 حبة' },
+        { id: 'takeOutHandleBag', name: 'Take out Handle Bag | هاندل باج سفري', unit: 'Carton', imageUrl: 'images/takeOutHandleBag.jpg',maxQuantity: 2, description: '250 PCS | كرتون 250 حبة' },
         { id: 'sweetTakeOutBox', name: 'Sweet Take-out Box | بوكس حلي سفري', unit: 'Carton', imageUrl: 'images/sweetTakeOutBox.jpg',maxQuantity: 2, description: 'Carton = 350 PCS | كرتون 350 حبة' },
         { id: 'sweetDineInPlate', name: 'Sweet Dine-in Plate | طبق حلي ورقي محلي', unit: 'Carton', imageUrl: 'images/sweetDineInPlate.jpg',maxQuantity: 2, description: 'Carton = 900 Plates | كرتون 900 طبق' },
         { id: 'takeOutSmallPacket', name: 'Take out Small Packet | باكت سفري صغير', unit: 'Baket', imageUrl: 'images/takeOutSmallPacket.jpg',maxQuantity: 2 , description: '500 Pakets | 500 باكت'},
@@ -21,9 +21,28 @@ const inventoryItems = {
         { id: 'v60', name: 'V60 Filters | فلاتر V60', unit: 'Box', imageUrl: 'images/v60.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
         { id: 'chemex', name: 'Chemex Filters | فلاتر كيميكس', unit: 'Box', imageUrl: 'images/chemex.jpg',maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' }
     ],
-    cleaning: [
-        { id: 'sanitizer', name: 'Sanitizer | معقم', unit: 'Bottle', imageUrl: 'images/sanitizer.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'detergent', name: 'Detergent | منظف', unit: 'Container', imageUrl: 'images/detergent.jpg',maxQuantity: 10 , description: 'Carton = 1000 Lids | كرتون 1000 غطاء'}
+    consumable: [
+        { id: 'coveredPlasticFork', name: 'شوكة بلاستيك مغلفة | Covered Plastic Fork', unit: 'Carton', imageUrl: 'images/coveredPlasticFork.jpg', maxQuantity: 1, description: 'Carton = 1000 Fork | كرتون 1000 شوكة' },
+        { id: 'coveredPlasticSpoon', name: 'معلقة بلاستيك مغلفة | Covered Plastic Spoon', unit: 'Carton', imageUrl: 'images/coveredPlasticSpoon.jpg', maxQuantity: 1, description: 'Box = 1000 Spoon | كرتون 1000 معلقة' },
+        { id: 'coveredPlasticKnife', name: 'سكين بلاستيك مغلفة | Covered Plastic Knife', unit: 'Carton', imageUrl: 'images/coveredPlasticKnife.jpg', maxQuantity: 1, description: 'Box = 1000 Knife | كرتون 1000 سكين' },
+        { id: 'strawBlack6mm', name: 'مصاص مغلف 6 مم | STRAW BLACK 6MM', unit: 'Carton', imageUrl: 'images/strawBlack6mm.jpg', maxQuantity: 1, description: 'Carton = 10000 Pieces | كرتون 10000 قطعة' },
+        { id: 'woodenCoffeeStirrerSticks', name: 'محرك خشبي | Wooden Coffee Stirrer Sticks', unit: 'Carton', imageUrl: 'images/woodenCoffeeStirrerSticks.jpg', maxQuantity: 1, description: 'Carton = 5000 Pieces | كرتون 5000 قطعة' },
+        { id: 'cupHolder2', name: 'حامل اكواب جواد ورقية ٢ كوب | Cup Holder 2', unit: 'Carton', imageUrl: 'images/cupHolder2.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
+        { id: 'cupHolder4', name: 'حامل اكواب ورقية ٤ كوب | Cup Holder 4', unit: 'Carton', imageUrl: 'images/cupHolder4.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
+        { id: 'atmPaperRoll', name: 'ورق مكائن شبكة | ATM Paper Roll', unit: 'Carton', imageUrl: 'images/atmPaperRoll.jpg', maxQuantity: 3, description: 'Bkt = 000 Pieces | باكت 000 ' },
+        { id: 'thermalPaperRoll70mm80mm', name: 'ورق رول كاشير70مم*80 | Thermal paper roll 70MM*80', unit: 'Carton', imageUrl: 'images/thermalPaperRoll70mm80mm.jpg', maxQuantity: 1, description: 'Carton = 50 ٌRolls | كرتون 50 رول' },
+        { id: 'floorDisinfectant30L', name: 'مطهر أرضيات 30 لتر | Floor Disinfectant 30L', unit: 'PC', imageUrl: 'images/floorDisinfectant30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
+        { id: 'glassCleaner30L', name: 'منظف زجاج  30 لتر | Glass Cleaner 30L', unit: 'PC', imageUrl: 'images/glassCleaner30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
+        { id: 'areonPerfumeSticks', name: 'اريون اعواد معطرة لافندر | Areon Perfume Sticks', PCS: 'Box', imageUrl: 'images/areonPerfumeSticks.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
+        { id: 'blackGlovesLarge', name: 'قفازات مقاس لارج | Black Gloves large', unit: 'Carton', imageUrl: 'images/blackGlovesLarge.jpg', maxQuantity: 1, description: 'Caton = 10 Boxes | كرتون 10 بوكسات' },
+        { id: 'cleaningSponge', name: 'سفينج تنظيف | Cleaning Sponge', unit: 'PCS', imageUrl: 'images/cleaningSponge.jpg', maxQuantity: 4, description: 'Piece = 1 Piece |  1 حبة' },
+        { id: 'whiteGarbageBagRoll10Gallon', name: 'أكياس بلدية رول ابيض 10 جالون | White Garbage Bag Roll 10 Gallon', unit: 'BKT', imageUrl: 'images/whiteGarbageBagRoll10Gallon.jpg', maxQuantity: 1, description: 'Baket = 5 Roll | باكت 5 رول' },
+        { id: 'blackGarbageBagRoll50Gallon', name: 'اكياس بلدية رول اسود 50 جالون | Black Garbage Bag Roll 50 Gallon', unit: 'BKT', imageUrl: 'images/blackGarbageBagRoll50Gallon.jpg', maxQuantity: 10, description: 'Box = 1000 Pieces | كرتون 1000 قطعة' },
+        { id: 'sanitaInterfoldCoarseWipes', name: 'مناديل سانيتا | Sanita Interfold Coarse Wipes', unit: 'Carton', imageUrl: 'images/sanitaInterfoldCoarseWipes.jpg', maxQuantity: 3, description: 'Carton = 18 Paket | كرتون 18 باكت' },
+        { id: 'blueRollTissues', name: 'مناديل رول أزرق | Blue Roll Tissues', unit: 'Roll', imageUrl: 'images/blueRollTissues.jpg', maxQuantity: 1, description: 'Roll = 375 sheets | الرول 375 شيت' },
+        { id: 'MopHeadRefill', name: 'غيار ممسحة موب | Mop Head Refill', unit: 'PCS', imageUrl: 'images/MopHeadRefill.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
+        { id: 'DishwashingLiquid', name: 'سائل غسيل صحون | Dishwashing Liquid', unit: 'PCS', imageUrl: 'images/DishwashingLiquid.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
+        { id: 'alEmlaqSuperGel', name: 'العملاق جيل | Al Emlaq Super Gel', unit: 'PCS', imageUrl: 'images/alEmlaqSuperGel.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' }
     ]
 };
 
@@ -33,7 +52,7 @@ const inventoryItems = {
 const selectedItems = {
     cupsLids: {},
     filters: {},
-    cleaning: {}
+    consumable: {}
 };
 
 function login() {
@@ -115,7 +134,7 @@ function updateDisplay() {
     // Update Filters section
     updateCategoryDisplay('filters', 'filtersItems');
     // Update Cleaning Materials section
-    updateCategoryDisplay('cleaning', 'cleaningItems');
+    updateCategoryDisplay('consumable', 'consumableItems');
 }
 
 function updateCategoryDisplay(category, containerId) {
