@@ -438,7 +438,7 @@ function showSweetOrderItems() {
         itemElement.className = 'selected-item';
         itemElement.innerHTML = `
             <span class="item-name" data-image="${item.imageUrl}">${itemName}</span>
-            <input type="number" class="quantity-input" placeholder="Inventory On Hand" data-item="${itemName}">
+            <input type="number" class="quantity-input" placeholder="On Hand" data-item="${itemName}">
         `;
         sweetOrderItemsContainer.appendChild(itemElement);
 
