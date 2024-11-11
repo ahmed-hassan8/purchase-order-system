@@ -462,10 +462,21 @@ function submitSweetOrder() {
         const dayOfWeek = getDayOfWeek(new Date());
         const orderQuantity = sweetItems[itemName][dayOfWeek];
 
-        if (inventoryOnHand < orderQuantity) {
+        let adjustedQuantity = orderQuantity - inventoryOnHand;
+
+        // Handle exceptional cases for Al-Nafl branch
+        if (branch === 'Al-Nafl') {
+            if (itemName === 'Hazelnut dates and pecans - بودنق التمر والبيكان' && inventoryOnHand <= 4) {
+                adjustedQuantity = 1;
+            } else if (itemName === 'Date with Cheese - سخان تشيز التمر' && inventoryOnHand <= 6) {
+                adjustedQuantity = 1;
+            }
+        }
+
+        if (adjustedQuantity > 0) {
             selectedSweetItems[itemName] = {
                 name: itemName,
-                quantity: orderQuantity - inventoryOnHand
+                quantity: adjustedQuantity
             };
         }
     });
