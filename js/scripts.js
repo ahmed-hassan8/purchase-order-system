@@ -133,7 +133,7 @@ const sweetInventory = {
         'Magic bar coconut - بار جوز الهند': {
             'Friday': 6, 'Saturday': 6, 'Sunday': 5, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 8, 'Thursday': 8, 'imageUrl': 'images/magic_bar_coconut.jpg'
         },
-        'brownies - براونيز': {
+        'Brownies - براونيز': {
             'Friday': 6, 'Saturday': 7, 'Sunday': 5, 'Monday': 4, 'Tuesday': 5, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/brownies.jpg'
         },
         'Chocolate cake - تشوكلت كيك': {
