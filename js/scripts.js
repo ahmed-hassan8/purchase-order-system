@@ -1,5 +1,5 @@
 // Inventory data structure
-// Updated inventory data structure
+
 const inventoryItems = {
     cupsLids: [
         { id: 'cup7oz', name: 'Cup 7OZ | كوب 7 اونص', unit: 'Carton', imageUrl: 'images/cup7oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 cups | كرتون 1000 كوب'},
@@ -193,6 +193,17 @@ function switchTab(tabId) {
         button.classList.remove('btn-primary');
     });
     event.target.classList.add('btn-primary');
+
+    // Update branch information if Sweet Order tab is active
+    if (tabId === 'sweetOrderTab') {
+        updateBranchInformation();
+    }
+}
+
+function updateBranchInformation() {
+    const branch = document.getElementById('branch').value;
+    document.getElementById('branch-information').innerText = `Branch: ${branch}`;
+    document.getElementById('sweetBranch-information').innerText = `Branch: ${branch}`;
 }
 
 function showCategoryItems(category) {
