@@ -47,6 +47,109 @@ const inventoryItems = {
 };
 
 
+// Sweet inventory data structure
+const sweetInventory = {
+    'Al-Nafl': {
+        'Banana cake - كيكة الموز': {
+            'Friday': 4, 'Saturday': 6, 'Sunday': 4, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 5, 'Thursday': 6, 'imageUrl': 'images/banana_cake.jpg'
+        },
+        'Chocolate Cookies - كوكيز': {
+            'Friday': 19, 'Saturday': 15, 'Sunday': 18, 'Monday': 16, 'Tuesday': 14, 'Wednesday': 19, 'Thursday': 25, 'imageUrl': 'images/chocolate_cookies.jpg'
+        },
+        'Cinnabon - سينابون': {
+            'Friday': 4, 'Saturday': 4, 'Sunday': 7, 'Monday': 2, 'Tuesday': 3, 'Wednesday': 6, 'Thursday': 7, 'imageUrl': 'images/cinnabon.jpg'
+        },
+        'Creme brulee - كريم بروليه': {
+            'Friday': 2, 'Saturday': 2, 'Sunday': 2, 'Monday': 2, 'Tuesday': 2, 'Wednesday': 2, 'Thursday': 2, 'imageUrl': 'images/creme_brulee.jpg'
+        },
+        'Date with Cheese - سخان تشيز التمر': {
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/date_with_cheese.jpg'
+        },
+        'Hazelnut dates and pecans - بودنق التمر والبيكان': {
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/hazelnut_dates_pecans.jpg'
+        },
+        'Lamington - لامنغتون': {
+            'Friday': 8, 'Saturday': 12, 'Sunday': 10, 'Monday': 6, 'Tuesday': 12, 'Wednesday': 8, 'Thursday': 10, 'imageUrl': 'images/lamington.jpg'
+        },
+        'Latte cake - لاتيه كيك': {
+            'Friday': 5, 'Saturday': 6, 'Sunday': 4, 'Monday': 6, 'Tuesday': 3, 'Wednesday': 7, 'Thursday': 6, 'imageUrl': 'images/latte_cake.jpg'
+        },
+        'Lemon Cake - كيكة ليمون': {
+            'Friday': 3, 'Saturday': 6, 'Sunday': 7, 'Monday': 7, 'Tuesday': 6, 'Wednesday': 8, 'Thursday': 6, 'imageUrl': 'images/lemon_cake.jpg'
+        },
+        'Magic bar coconut - بار جوز الهند': {
+            'Friday': 9, 'Saturday': 8, 'Sunday': 7, 'Monday': 6, 'Tuesday': 4, 'Wednesday': 8, 'Thursday': 8, 'imageUrl': 'images/magic_bar_coconut.jpg'
+        },
+        'brownies - براونيز': {
+            'Friday': 10, 'Saturday': 4, 'Sunday': 5, 'Monday': 8, 'Tuesday': 6, 'Wednesday': 5, 'Thursday': 10, 'imageUrl': 'images/brownies.jpg'
+        },
+        'chocolate cake - تشوكلت كيك': {
+            'Friday': 5, 'Saturday': 3, 'Sunday': 3, 'Monday': 4, 'Tuesday': 3, 'Wednesday': 5, 'Thursday': 6, 'imageUrl': 'images/chocolate_cake.jpg'
+        },
+        'magic bar Loz - بار اللوز': {
+            'Friday': 4, 'Saturday': 7, 'Sunday': 4, 'Monday': 9, 'Tuesday': 10, 'Wednesday': 7, 'Thursday': 7, 'imageUrl': 'images/magic_bar_loz.jpg'
+        },
+        'marble cake - ماربل كيك': {
+            'Friday': 6, 'Saturday': 3, 'Sunday': 8, 'Monday': 9, 'Tuesday': 8, 'Wednesday': 8, 'Thursday': 9, 'imageUrl': 'images/marble_cake.jpg'
+        },
+        'tiramisu cacke - تيرامسيو كيك': {
+            'Friday': 6, 'Saturday': 4, 'Sunday': 5, 'Monday': 4, 'Tuesday': 4, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/tiramisu_cake.jpg'
+        }
+    },
+    'Aqiq': {
+        'Banana cake - كيكة الموز': {
+            'Friday': 4, 'Saturday': 5, 'Sunday': 4, 'Monday': 5, 'Tuesday': 6, 'Wednesday': 5, 'Thursday': 5, 'imageUrl': 'images/banana_cake.jpg'
+        },
+        'Big Cookies - كوكيز كبير': {
+            'Friday': 19, 'Saturday': 8, 'Sunday': 10, 'Monday': 10, 'Tuesday': 10, 'Wednesday': 13, 'Thursday': 9, 'imageUrl': 'images/big_cookies.jpg'
+        },
+        'Chocolate Cookies - كوكيز': {
+            'Friday': 13, 'Saturday': 16, 'Sunday': 11, 'Monday': 18, 'Tuesday': 9, 'Wednesday': 13, 'Thursday': 19, 'imageUrl': 'images/chocolate_cookies.jpg'
+        },
+        'Chocolate Hazeinut - بودنق الشوكلاته': {
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg'
+        },
+        'Cinnabon - سينابون': {
+            'Friday': 19, 'Saturday': 12, 'Sunday': 8, 'Monday': 11, 'Tuesday': 7, 'Wednesday': 9, 'Thursday': 23, 'imageUrl': 'images/cinnabon.jpg'
+        },
+        'Creme brulee - كريم بروليه': {
+            'Friday': 6, 'Saturday': 4, 'Sunday': 4, 'Monday': 3, 'Tuesday': 4, 'Wednesday': 1, 'Thursday': 7, 'imageUrl': 'images/creme_brulee.jpg'
+        },
+        'Date with Cheese - سخان تشيز التمر': {
+            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg'
+        },
+        'Hazelnut dates and pecans - بودنق التمر والبيكان': {
+            'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/hazelnut_dates_pecans.jpg'
+        },
+        'Lamington - لامنغتون': {
+            'Friday': 20, 'Saturday': 16, 'Sunday': 12, 'Monday': 16, 'Tuesday': 12, 'Wednesday': 12, 'Thursday': 16, 'imageUrl': 'images/lamington.jpg'
+        },
+        'Latte cake - لاتيه كيك': {
+            'Friday': 8, 'Saturday': 6, 'Sunday': 3, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 4, 'Thursday': 5, 'imageUrl': 'images/latte_cake.jpg'
+        },
+        'Lemon Cake - كيكة ليمون': {
+            'Friday': 8, 'Saturday': 6, 'Sunday': 5, 'Monday': 5, 'Tuesday': 4, 'Wednesday': 5, 'Thursday': 5, 'imageUrl': 'images/lemon_cake.jpg'
+        },
+        'Magic bar coconut - بار جوز الهند': {
+            'Friday': 6, 'Saturday': 6, 'Sunday': 5, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 8, 'Thursday': 8, 'imageUrl': 'images/magic_bar_coconut.jpg'
+        },
+        'brownies - براونيز': {
+            'Friday': 6, 'Saturday': 7, 'Sunday': 5, 'Monday': 4, 'Tuesday': 5, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/brownies.jpg'
+        },
+        'chocolate cake - تشوكلت كيك': {
+            'Friday': 8, 'Saturday': 7, 'Sunday': 5, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 9, 'imageUrl': 'images/chocolate_cake.jpg'
+        },
+        'magic bar Loz - بار اللوز': {
+            'Friday': 7, 'Saturday': 7, 'Sunday': 6, 'Monday': 7, 'Tuesday': 7, 'Wednesday': 6, 'Thursday': 9, 'imageUrl': 'images/magic_bar_loz.jpg'
+        },
+        'marble cake - ماربل كيك': {
+            'Friday': 5, 'Saturday': 3, 'Sunday': 8, 'Monday': 5, 'Tuesday': 6, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/marble_cake.jpg'
+        },
+        'tiramisu cacke - تيرامسيو كيك': {
+            'Friday': 9, 'Saturday': 7, 'Sunday': 4, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 10, 'imageUrl': 'images/tiramisu_cake.jpg'
+        }
+    }
+};
 
 // Selected items storage
 const selectedItems = {
@@ -54,6 +157,9 @@ const selectedItems = {
     filters: {},
     consumable: {}
 };
+
+// Selected sweet items storage
+const selectedSweetItems = {};
 
 function login() {
     const branch = document.getElementById('branch').value;
@@ -169,14 +275,13 @@ function updateCategoryDisplay(category, containerId) {
     });
 }
 
-function showPopup(imageUrl, description) {
+function showPopup(imageUrl) {
     const popup = document.createElement('div');
     popup.className = 'popup';
     popup.innerHTML = `
         <div class="popup-content">
             <span class="close-popup">&times;</span>
             <img src="${imageUrl}" alt="Item Image">
-            <p class="item-description">${description}</p>
         </div>
     `;
 
@@ -308,4 +413,123 @@ function generatePDF() {
         // Hide the printable area after PDF generation
         printableOrder.style.display = 'none';
     });
+}
+
+function showSweetOrderItems() {
+    const branch = document.getElementById('branch').value;
+    const sweetItems = sweetInventory[branch];
+    const sweetOrderItemsContainer = document.getElementById('sweetOrderItems');
+    sweetOrderItemsContainer.innerHTML = '';
+
+    for (const itemName in sweetItems) {
+        const item = sweetItems[itemName];
+        const itemElement = document.createElement('div');
+        itemElement.className = 'selected-item';
+        itemElement.innerHTML = `
+            <span class="item-name" data-image="${item.imageUrl}">${itemName}</span>
+            <input type="number" class="quantity-input" placeholder="Inventory On Hand" data-item="${itemName}">
+        `;
+        sweetOrderItemsContainer.appendChild(itemElement);
+
+        // Add click event listener to the item name
+        const itemNameElement = itemElement.querySelector('.item-name');
+        itemNameElement.addEventListener('click', function() {
+            showPopup(this.getAttribute('data-image'));
+        });
+    }
+}
+
+function submitSweetOrder() {
+    const branch = document.getElementById('branch').value;
+    const sweetItems = sweetInventory[branch];
+    const sweetOrderItemsContainer = document.getElementById('sweetOrderItems');
+    const inputs = sweetOrderItemsContainer.querySelectorAll('.quantity-input');
+
+    inputs.forEach(input => {
+        const itemName = input.getAttribute('data-item');
+        const inventoryOnHand = parseInt(input.value);
+        const dayOfWeek = getDayOfWeek(new Date());
+        const orderQuantity = sweetItems[itemName][dayOfWeek];
+
+        if (inventoryOnHand < orderQuantity) {
+            selectedSweetItems[itemName] = {
+                name: itemName,
+                quantity: orderQuantity - inventoryOnHand
+            };
+        }
+    });
+
+    generateSweetOrderPDF().then(() => {
+        const message = "Sweet Order:\n\n";
+        for (const itemName in selectedSweetItems) {
+            const item = selectedSweetItems[itemName];
+            message += `- ${item.name}: ${item.quantity}\n`;
+        }
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://chat.whatsapp.com/Fyoa3jnYx1ZERYB90DkVRX?text=${encodedMessage}`;
+        window.open(whatsappUrl);
+    });
+}
+
+function generateSweetOrderPDF() {
+    const branch = document.getElementById('branch').value;
+    const username = document.getElementById('username').value;
+    const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    document.getElementById('pdfSweetBranch').innerText = branch;
+    document.getElementById('pdfSweetDate').innerText = `${date} - ${username}`;
+
+    const pdfSweetItemsContainer = document.getElementById('pdfSweetItems');
+    pdfSweetItemsContainer.innerHTML = '';
+
+    const table = document.createElement('table');
+    table.style.width = '100%';
+    table.style.borderCollapse = 'collapse';
+    table.style.marginBottom = '20px';
+
+    const headerRow = document.createElement('tr');
+    ['Item Name', 'Quantity'].forEach(headerText => {
+        const th = document.createElement('th');
+        th.style.border = '1px solid #000';
+        th.style.padding = '8px';
+        th.style.backgroundColor = '#7BA084';
+        th.style.color = '#fff';
+        th.innerText = headerText;
+        headerRow.appendChild(th);
+    });
+    table.appendChild(headerRow);
+
+    for (const itemName in selectedSweetItems) {
+        const item = selectedSweetItems[itemName];
+        const row = document.createElement('tr');
+        ['name', 'quantity'].forEach(field => {
+            const td = document.createElement('td');
+            td.style.border = '1px solid #000';
+            td.style.padding = '8px';
+            td.innerText = item[field];
+            row.appendChild(td);
+        });
+        table.appendChild(row);
+    }
+
+    pdfSweetItemsContainer.appendChild(table);
+
+    const printableSweetOrder = document.getElementById('printableSweetOrder');
+    printableSweetOrder.style.display = 'block';
+
+    html2pdf(printableSweetOrder, {
+        margin: 0.5,
+        filename: `${branch}_${date}_sweet_order.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    }).then(() => {
+        printableSweetOrder.style.display = 'none';
+    });
+}
+
+function getDayOfWeek(date) {
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayIndex = date.getDay();
+    return daysOfWeek[dayIndex];
 }
