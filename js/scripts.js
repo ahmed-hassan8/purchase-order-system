@@ -80,19 +80,19 @@ const sweetInventory = {
         'Magic bar coconut - بار جوز الهند': {
             'Friday': 9, 'Saturday': 8, 'Sunday': 7, 'Monday': 6, 'Tuesday': 4, 'Wednesday': 8, 'Thursday': 8, 'imageUrl': 'images/magic_bar_coconut.jpg'
         },
-        'brownies - براونيز': {
+        'Brownies - براونيز': {
             'Friday': 10, 'Saturday': 4, 'Sunday': 5, 'Monday': 8, 'Tuesday': 6, 'Wednesday': 5, 'Thursday': 10, 'imageUrl': 'images/brownies.jpg'
         },
-        'chocolate cake - تشوكلت كيك': {
+        'Chocolate cake - تشوكلت كيك': {
             'Friday': 5, 'Saturday': 3, 'Sunday': 3, 'Monday': 4, 'Tuesday': 3, 'Wednesday': 5, 'Thursday': 6, 'imageUrl': 'images/chocolate_cake.jpg'
         },
-        'magic bar Loz - بار اللوز': {
+        'Magic bar Loz - بار اللوز': {
             'Friday': 4, 'Saturday': 7, 'Sunday': 4, 'Monday': 9, 'Tuesday': 10, 'Wednesday': 7, 'Thursday': 7, 'imageUrl': 'images/magic_bar_loz.jpg'
         },
-        'marble cake - ماربل كيك': {
+        'Marble cake - ماربل كيك': {
             'Friday': 6, 'Saturday': 3, 'Sunday': 8, 'Monday': 9, 'Tuesday': 8, 'Wednesday': 8, 'Thursday': 9, 'imageUrl': 'images/marble_cake.jpg'
         },
-        'tiramisu cacke - تيرامسيو كيك': {
+        'Tiramisu cacke - تيرامسيو كيك': {
             'Friday': 6, 'Saturday': 4, 'Sunday': 5, 'Monday': 4, 'Tuesday': 4, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/tiramisu_cake.jpg'
         }
     },
@@ -136,16 +136,16 @@ const sweetInventory = {
         'brownies - براونيز': {
             'Friday': 6, 'Saturday': 7, 'Sunday': 5, 'Monday': 4, 'Tuesday': 5, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/brownies.jpg'
         },
-        'chocolate cake - تشوكلت كيك': {
+        'Chocolate cake - تشوكلت كيك': {
             'Friday': 8, 'Saturday': 7, 'Sunday': 5, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 9, 'imageUrl': 'images/chocolate_cake.jpg'
         },
-        'magic bar Loz - بار اللوز': {
+        'Magic bar Loz - بار اللوز': {
             'Friday': 7, 'Saturday': 7, 'Sunday': 6, 'Monday': 7, 'Tuesday': 7, 'Wednesday': 6, 'Thursday': 9, 'imageUrl': 'images/magic_bar_loz.jpg'
         },
-        'marble cake - ماربل كيك': {
+        'Marble cake - ماربل كيك': {
             'Friday': 5, 'Saturday': 3, 'Sunday': 8, 'Monday': 5, 'Tuesday': 6, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/marble_cake.jpg'
         },
-        'tiramisu cacke - تيرامسيو كيك': {
+        'Tiramisu cacke - تيرامسيو كيك': {
             'Friday': 9, 'Saturday': 7, 'Sunday': 4, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 10, 'imageUrl': 'images/tiramisu_cake.jpg'
         }
     }
