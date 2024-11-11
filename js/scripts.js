@@ -456,11 +456,22 @@ function submitSweetOrder() {
     const sweetOrderItemsContainer = document.getElementById('sweetOrderItems');
     const inputs = sweetOrderItemsContainer.querySelectorAll('.quantity-input');
 
+    const creationDate = new Date();
+    const creationDayOfWeek = getDayOfWeek(creationDate);
+    const creationTime = creationDate.getHours();
+
+    // Determine the order day based on the creation time
+    let orderDayOfWeek = creationDayOfWeek;
+    let orderDate = new Date(creationDate);
+    if (creationTime >= 15) {
+        orderDayOfWeek = getNextDayOfWeek(creationDayOfWeek);
+        orderDate.setDate(orderDate.getDate() + 1); // Move to the next day
+    }
+
     inputs.forEach(input => {
         const itemName = input.getAttribute('data-item');
         const inventoryOnHand = parseInt(input.value);
-        const dayOfWeek = getDayOfWeek(new Date());
-        const orderQuantity = sweetItems[itemName][dayOfWeek];
+        const orderQuantity = sweetItems[itemName][orderDayOfWeek];
 
         let adjustedQuantity = orderQuantity - inventoryOnHand;
 
@@ -481,7 +492,7 @@ function submitSweetOrder() {
         }
     });
 
-    generateSweetOrderPDF().then(() => {
+    generateSweetOrderPDF(orderDate).then(() => {
         const message = "Sweet Order:\n\n";
         for (const itemName in selectedSweetItems) {
             const item = selectedSweetItems[itemName];
@@ -493,10 +504,23 @@ function submitSweetOrder() {
     });
 }
 
-function generateSweetOrderPDF() {
+function getDayOfWeek(date) {
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayIndex = date.getDay();
+    return daysOfWeek[dayIndex];
+}
+
+function getNextDayOfWeek(currentDay) {
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentIndex = daysOfWeek.indexOf(currentDay);
+    const nextIndex = (currentIndex + 1) % 7;
+    return daysOfWeek[nextIndex];
+}
+
+function generateSweetOrderPDF(orderDate) {
     const branch = document.getElementById('branch').value;
     const username = document.getElementById('username').value;
-    const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    const date = orderDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
     document.getElementById('pdfSweetBranch').innerText = branch;
     document.getElementById('pdfSweetDate').innerText = `${date} - ${username}`;
@@ -549,7 +573,6 @@ function generateSweetOrderPDF() {
         printableSweetOrder.style.display = 'none';
     });
 }
-
 function getDayOfWeek(date) {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dayIndex = date.getDay();
