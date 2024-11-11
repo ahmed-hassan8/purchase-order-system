@@ -48,6 +48,7 @@
 <div id="mainPage" class="container mx-auto p-4" style="display: none;">
     <div class="flex gap-4 mb-6">
         <button onclick="switchTab('purchaseTab')" class="btn btn-primary">Purchase Order</button>
+        <button onclick="switchTab('sweetOrderTab')" class="btn btn-primary">Sweet Order</button>
     </div>
 
     <!-- Purchase Order Tab -->
@@ -93,4 +94,30 @@
             Submit The Order
         </button>
     </div>
+
+    <!-- Sweet Order Tab -->
+    <div id="sweetOrderTab" class="tab-content">
+        <div class="order-section">
+            <h2 class="section-title noto-naskh-arabic">Sweet Order</h2>
+            <div id="sweetOrderItems" class="selected-items"></div>
+            <button onclick="showSweetOrderItems()" class="btn btn-accent">
+                <i class="fas fa-plus mr-2"></i>Add Sweet Items
+            </button>
+        </div>
+
+        <!-- Hidden printable area for PDF generation -->
+        <div id="printableSweetOrder" class="noto-naskh-arabic" style="display: none;">
+            <h2 class="text-2xl font-bold text-center mb-4">Sweet Order / طلب حلويات</h2>
+            <p>Branch: <span id="pdfSweetBranch"></span></p>
+            <p>Date: <span id="pdfSweetDate"></span></p>
+            <div id="pdfSweetItems"></div>
+        </div>
+
+        <!-- Submit Sweet Order Button -->
+        <button onclick="submitSweetOrder()" class="btn btn-primary">
+            Submit The Sweet Order
+        </button>
+    </div>
 </div>
+</body>
+</html>
