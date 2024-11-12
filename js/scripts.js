@@ -286,13 +286,14 @@ function updateCategoryDisplay(category, containerId) {
     });
 }
 
-function showPopup(imageUrl) {
+function showPopup(imageUrl, description) {
     const popup = document.createElement('div');
     popup.className = 'popup';
     popup.innerHTML = `
         <div class="popup-content">
             <span class="close-popup">&times;</span>
             <img src="${imageUrl}" alt="Item Image">
+            <div class="item-description">${description}</div>
         </div>
     `;
 
@@ -314,7 +315,6 @@ function showPopup(imageUrl) {
         }
     });
 }
-
 function submitOrder() {
     generatePDF().then(() => {
         const message = "Purchase Order:\n\n";
