@@ -106,7 +106,7 @@ const sweetInventory = {
             'Friday': 13, 'Saturday': 16, 'Sunday': 11, 'Monday': 18, 'Tuesday': 9, 'Wednesday': 13, 'Thursday': 19, 'imageUrl': 'images/chocolate_cookies.jpg'
         },
         'Chocolate Hazeinut - بودنق الشوكلاته': {
-            'Friday': 3, 'Saturday': 2, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg', dozen: true
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg', dozen: true
         },
         'Cinnabon - سينابون': {
             'Friday': 19, 'Saturday': 12, 'Sunday': 8, 'Monday': 11, 'Tuesday': 7, 'Wednesday': 9, 'Thursday': 23, 'imageUrl': 'images/cinnabon.jpg'
@@ -115,7 +115,7 @@ const sweetInventory = {
             'Friday': 6, 'Saturday': 4, 'Sunday': 4, 'Monday': 3, 'Tuesday': 4, 'Wednesday': 1, 'Thursday': 7, 'imageUrl': 'images/creme_brulee.jpg'
         },
         'Date with Cheese - سخان تشيز التمر': {
-            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 2, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
+            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
         },
         'Hazelnut dates and pecans - بودنق التمر والبيكان': {
             'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
