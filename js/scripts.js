@@ -438,7 +438,15 @@ function showSweetOrderItems() {
         itemElement.className = 'selected-item';
         itemElement.innerHTML = `
             <span class="item-name" data-image="${item.imageUrl}">${itemName}</span>
-            <input type="number" class="quantity-input" placeholder="On Hand" data-item="${itemName}">
+            <div class="quantity-control">
+                <button class="quantity-btn" onclick="updateSweetQuantity('${itemName}', -1)">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input type="number" class="quantity-input" placeholder="On Hand" data-item="${itemName}" value="0">
+                <button class="quantity-btn" onclick="updateSweetQuantity('${itemName}', 1)">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
         `;
         sweetOrderItemsContainer.appendChild(itemElement);
 
@@ -449,6 +457,20 @@ function showSweetOrderItems() {
         });
     }
 }
+
+function updateSweetQuantity(itemName, delta) {
+    const input = document.querySelector(`input[data-item="${itemName}"]`);
+    let currentValue = parseInt(input.value);
+    currentValue += delta;
+    if (currentValue < 0) {
+        currentValue = 0;
+    }
+    input.value = currentValue;
+}
+
+// Existing code for submitting order and updating display
+// ...
+
 
 function submitSweetOrder() {
     const branch = document.getElementById('branch').value;
