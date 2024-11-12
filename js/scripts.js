@@ -47,7 +47,6 @@ const inventoryItems = {
 };
 
 
-// Sweet inventory data structure
 const sweetInventory = {
     'Al-Nafl': {
         'Banana cake - كيكة الموز': {
@@ -63,10 +62,10 @@ const sweetInventory = {
             'Friday': 2, 'Saturday': 2, 'Sunday': 2, 'Monday': 2, 'Tuesday': 2, 'Wednesday': 2, 'Thursday': 2, 'imageUrl': 'images/creme_brulee.jpg'
         },
         'Date with Cheese - سخان تشيز التمر': {
-            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/date_with_cheese.jpg'
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
         },
         'Hazelnut dates and pecans - بودنق التمر والبيكان': {
-            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/hazelnut_dates_pecans.jpg'
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
         },
         'Lamington - لامنغتون': {
             'Friday': 8, 'Saturday': 12, 'Sunday': 10, 'Monday': 6, 'Tuesday': 12, 'Wednesday': 8, 'Thursday': 10, 'imageUrl': 'images/lamington.jpg'
@@ -107,7 +106,7 @@ const sweetInventory = {
             'Friday': 13, 'Saturday': 16, 'Sunday': 11, 'Monday': 18, 'Tuesday': 9, 'Wednesday': 13, 'Thursday': 19, 'imageUrl': 'images/chocolate_cookies.jpg'
         },
         'Chocolate Hazeinut - بودنق الشوكلاته': {
-            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg'
+            'Friday': 3, 'Saturday': 2, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg', dozen: true
         },
         'Cinnabon - سينابون': {
             'Friday': 19, 'Saturday': 12, 'Sunday': 8, 'Monday': 11, 'Tuesday': 7, 'Wednesday': 9, 'Thursday': 23, 'imageUrl': 'images/cinnabon.jpg'
@@ -116,10 +115,10 @@ const sweetInventory = {
             'Friday': 6, 'Saturday': 4, 'Sunday': 4, 'Monday': 3, 'Tuesday': 4, 'Wednesday': 1, 'Thursday': 7, 'imageUrl': 'images/creme_brulee.jpg'
         },
         'Date with Cheese - سخان تشيز التمر': {
-            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg'
+            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 2, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
         },
         'Hazelnut dates and pecans - بودنق التمر والبيكان': {
-            'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/hazelnut_dates_pecans.jpg'
+            'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
         },
         'Lamington - لامنغتون': {
             'Friday': 20, 'Saturday': 16, 'Sunday': 12, 'Monday': 16, 'Tuesday': 12, 'Wednesday': 12, 'Thursday': 16, 'imageUrl': 'images/lamington.jpg'
@@ -493,19 +492,9 @@ function submitSweetOrder() {
     inputs.forEach(input => {
         const itemName = input.getAttribute('data-item');
         const inventoryOnHand = parseInt(input.value);
-        const orderQuantity = sweetItems[itemName][orderDayOfWeek];
-
-        let adjustedQuantity = orderQuantity - inventoryOnHand;
-
-        // Handle exceptional cases for Al-Nafl branch
-        if (branch === 'Al-Nafl') {
-            if (itemName === 'Hazelnut dates and pecans - بودنق التمر والبيكان' && inventoryOnHand <= 4) {
-                adjustedQuantity = 1;
-            } else if (itemName === 'Date with Cheese - سخان تشيز التمر' && inventoryOnHand <= 6) {
-                adjustedQuantity = 1;
-            }
-        }
-
+    
+        const adjustedQuantity = getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetItems);
+    
         if (adjustedQuantity > 0) {
             selectedSweetItems[itemName] = {
                 name: itemName,
@@ -513,6 +502,7 @@ function submitSweetOrder() {
             };
         }
     });
+    
 
     generateSweetOrderPDF(orderDate).then(() => {
         const message = "Sweet Order:\n\n";
@@ -524,6 +514,26 @@ function submitSweetOrder() {
         const whatsappUrl = `https://chat.whatsapp.com/Fyoa3jnYx1ZERYB90DkVRX?text=${encodedMessage}`;
         window.open(whatsappUrl);
     });
+}
+
+function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetItems) {
+    const orderQuantity = sweetItems[itemName][orderDayOfWeek];
+    let adjustedQuantity = orderQuantity;
+
+    // Check if the item has the dozen property
+    if (sweetItems[itemName].dozen) {
+        if (inventoryOnHand >= 5) {
+            // Reduce by 1 if on hand quantity >= 5
+            adjustedQuantity = orderQuantity - 1;
+        } else {
+            // Else keep the default order quantity
+            adjustedQuantity = orderQuantity;
+        }
+    } else {
+        adjustedQuantity = orderQuantity;
+    }
+
+    return adjustedQuantity;
 }
 
 function getDayOfWeek(date) {
