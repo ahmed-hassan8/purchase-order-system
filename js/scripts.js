@@ -18,33 +18,53 @@ const inventoryItems = {
         { id: 'takeOutBigPacket', name: 'Take out Big Packet | باكت سفري كبير', unit: 'Baket', imageUrl: 'images/takeOutBigPacket.jpg' ,maxQuantity: 2, description: '500 Pakets | 500 باكت'},
     ],
     filters: [
-        { id: 'v60', name: 'V60 Filters | فلاتر V60', unit: 'Box', imageUrl: 'images/v60.jpg' ,maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
-        { id: 'chemex', name: 'Chemex Filters | فلاتر كيميكس', unit: 'Box', imageUrl: 'images/chemex.jpg',maxQuantity: 10, description: 'Carton = 1000 Lids | كرتون 1000 غطاء' }
+        { id: 'ColdBrew', name: 'Cold Brew Filter Bag | فلتر كولد برو كركدية', unit: 'BKT', imageUrl: 'images/ColdBrew.jpg' ,maxQuantity: 1, description: 'BKT = 50 Filters | باكت 50 فلتر'},
+        { id: 'CoffeeFilters', name: 'FETCO Coffee Filters | فلتر قهوةاليوم فيتكو مقاس 13', unit: 'CTN', imageUrl: 'images/CoffeeFilters.jpg',maxQuantity: 1, description: 'Carton = 500 Filters | كرتون 500 فلتر' }
     ],
-    consumable: [
-        { id: 'coveredPlasticFork', name: 'شوكة بلاستيك مغلفة | Covered Plastic Fork', unit: 'Carton', imageUrl: 'images/coveredPlasticFork.jpg', maxQuantity: 1, description: 'Carton = 1000 Fork | كرتون 1000 شوكة' },
-        { id: 'coveredPlasticSpoon', name: 'معلقة بلاستيك مغلفة | Covered Plastic Spoon', unit: 'Carton', imageUrl: 'images/coveredPlasticSpoon.jpg', maxQuantity: 1, description: 'Box = 1000 Spoon | كرتون 1000 معلقة' },
-        { id: 'coveredPlasticKnife', name: 'سكين بلاستيك مغلفة | Covered Plastic Knife', unit: 'Carton', imageUrl: 'images/coveredPlasticKnife.jpg', maxQuantity: 1, description: 'Box = 1000 Knife | كرتون 1000 سكين' },
-        { id: 'strawBlack6mm', name: 'مصاص مغلف 6 مم | STRAW BLACK 6MM', unit: 'Carton', imageUrl: 'images/strawBlack6mm.jpg', maxQuantity: 1, description: 'Carton = 10000 Pieces | كرتون 10000 قطعة' },
-        { id: 'woodenCoffeeStirrerSticks', name: 'محرك خشبي | Wooden Coffee Stirrer Sticks', unit: 'Carton', imageUrl: 'images/woodenCoffeeStirrerSticks.jpg', maxQuantity: 1, description: 'Carton = 5000 Pieces | كرتون 5000 قطعة' },
-        { id: 'cupHolder2', name: 'حامل اكواب جواد ورقية ٢ كوب | Cup Holder 2', unit: 'Carton', imageUrl: 'images/cupHolder2.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
-        { id: 'cupHolder4', name: 'حامل اكواب ورقية ٤ كوب | Cup Holder 4', unit: 'Carton', imageUrl: 'images/cupHolder4.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
-        { id: 'atmPaperRoll', name: 'ورق مكائن شبكة | ATM Paper Roll', unit: 'Carton', imageUrl: 'images/atmPaperRoll.jpg', maxQuantity: 3, description: 'Bkt = 000 Pieces | باكت 000 ' },
-        { id: 'thermalPaperRoll70mm80mm', name: 'ورق رول كاشير70مم*80 | Thermal paper roll 70MM*80', unit: 'Carton', imageUrl: 'images/thermalPaperRoll70mm80mm.jpg', maxQuantity: 1, description: 'Carton = 50 ٌRolls | كرتون 50 رول' },
-        { id: 'floorDisinfectant30L', name: 'مطهر أرضيات 30 لتر | Floor Disinfectant 30L', unit: 'PC', imageUrl: 'images/floorDisinfectant30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
-        { id: 'glassCleaner30L', name: 'منظف زجاج  30 لتر | Glass Cleaner 30L', unit: 'PC', imageUrl: 'images/glassCleaner30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
-        { id: 'areonPerfumeSticks', name: 'اريون اعواد معطرة لافندر | Areon Perfume Sticks', unit: 'PC', imageUrl: 'images/areonPerfumeSticks.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
-        { id: 'blackGlovesLarge', name: 'قفازات مقاس لارج | Black Gloves large', unit: 'Carton', imageUrl: 'images/blackGlovesLarge.jpg', maxQuantity: 1, description: 'Caton = 10 Boxes | كرتون 10 بوكسات' },
-        { id: 'cleaningSponge', name: 'سفينج تنظيف | Cleaning Sponge', unit: 'PCS', imageUrl: 'images/cleaningSponge.jpg', maxQuantity: 4, description: 'Piece = 1 Piece |  1 حبة' },
-        { id: 'whiteGarbageBagRoll10Gallon', name: 'أكياس بلدية رول ابيض 10 جالون | White Garbage Bag Roll 10 Gallon', unit: 'BKT', imageUrl: 'images/whiteGarbageBagRoll10Gallon.jpg', maxQuantity: 1, description: 'Baket = 5 Roll | باكت 5 رول' },
-        { id: 'blackGarbageBagRoll50Gallon', name: 'اكياس بلدية رول اسود 50 جالون | Black Garbage Bag Roll 50 Gallon', unit: 'BKT', imageUrl: 'images/blackGarbageBagRoll50Gallon.jpg', maxQuantity: 2, description: 'Baket = 10 Roll | باكت 10 رول' },
-        { id: 'sanitaInterfoldCoarseWipes', name: 'مناديل سانيتا | Sanita Interfold Coarse Wipes', unit: 'Carton', imageUrl: 'images/sanitaInterfoldCoarseWipes.jpg', maxQuantity: 3, description: 'Carton = 18 Paket | كرتون 18 باكت' },
-        { id: 'blueRollTissues', name: 'مناديل رول أزرق | Blue Roll Tissues', unit: 'Roll', imageUrl: 'images/blueRollTissues.jpg', maxQuantity: 1, description: 'Roll = 375 sheets | الرول 375 شيت' },
-        { id: 'MopHeadRefill', name: 'غيار ممسحة موب | Mop Head Refill', unit: 'PCS', imageUrl: 'images/MopHeadRefill.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
-        { id: 'DishwashingLiquid', name: 'سائل غسيل صحون | Dishwashing Liquid', unit: 'PCS', imageUrl: 'images/DishwashingLiquid.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
-        { id: 'alEmlaqSuperGel', name: 'العملاق جيل | Al Emlaq Super Gel', unit: 'PCS', imageUrl: 'images/alEmlaqSuperGel.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' }
-    ]
-};
+        consumable: [
+            { id: 'coveredPlasticFork', name: 'Covered Plastic Fork | شوكة بلاستيك مغلفة', unit: 'Carton', imageUrl: 'images/coveredPlasticFork.jpg', maxQuantity: 1, description: 'Carton = 1000 Fork | كرتون 1000 شوكة' },
+            { id: 'coveredPlasticSpoon', name: 'Covered Plastic Spoon | معلقة بلاستيك مغلفة', unit: 'Carton', imageUrl: 'images/coveredPlasticSpoon.jpg', maxQuantity: 1, description: 'Box = 1000 Spoon | كرتون 1000 معلقة' },
+            { id: 'coveredPlasticKnife', name: 'Covered Plastic Knife | سكين بلاستيك مغلفة', unit: 'Carton', imageUrl: 'images/coveredPlasticKnife.jpg', maxQuantity: 1, description: 'Box = 1000 Knife | كرتون 1000 سكين' },
+            { id: 'strawBlack6mm', name: 'STRAW BLACK 6MM | مصاص مغلف 6 مم', unit: 'Carton', imageUrl: 'images/strawBlack6mm.jpg', maxQuantity: 1, description: 'Carton = 10000 Pieces | كرتون 10000 قطعة' },
+            { id: 'woodenCoffeeStirrerSticks', name: 'Wooden Coffee Stirrer Sticks | محرك خشبي', unit: 'Carton', imageUrl: 'images/woodenCoffeeStirrerSticks.jpg', maxQuantity: 1, description: 'Carton = 5000 Pieces | كرتون 5000 قطعة' },
+            { id: 'cupHolder2', name: 'Cup Holder 2 | حامل اكواب جواد ورقية ٢ كوب', unit: 'Carton', imageUrl: 'images/cupHolder2.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
+            { id: 'cupHolder4', name: 'Cup Holder 4 | حامل اكواب ورقية ٤ كوب', unit: 'Carton', imageUrl: 'images/cupHolder4.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
+            { id: 'atmPaperRoll', name: 'ATM Paper Roll | ورق مكائن شبكة', unit: 'Carton', imageUrl: 'images/atmPaperRoll.jpg', maxQuantity: 3, description: 'Bkt = 000 Pieces | باكت 000 ' },
+            { id: 'thermalPaperRoll70mm80mm', name: 'Thermal paper roll 70MM*80 | ورق رول كاشير70مم*80', unit: 'Carton', imageUrl: 'images/thermalPaperRoll70mm80mm.jpg', maxQuantity: 1, description: 'Carton = 50 ٌRolls | كرتون 50 رول' },
+            { id: 'floorDisinfectant30L', name: 'Floor Disinfectant 30L | مطهر أرضيات 30 لتر', unit: 'PC', imageUrl: 'images/floorDisinfectant30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
+            { id: 'glassCleaner30L', name: 'Glass Cleaner 30L | منظف زجاج  30 لتر', unit: 'PC', imageUrl: 'images/glassCleaner30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
+            { id: 'areonPerfumeSticks', name: 'Areon Perfume Sticks | اريون اعواد معطرة لافندر', unit: 'PC', imageUrl: 'images/areonPerfumeSticks.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'blackGlovesLarge', name: 'Black Gloves large | قفازات مقاس لارج', unit: 'Carton', imageUrl: 'images/blackGlovesLarge.jpg', maxQuantity: 1, description: 'Caton = 10 Boxes | كرتون 10 بوكسات' },
+            { id: 'cleaningSponge', name: 'Cleaning Sponge | سفينج تنظيف', unit: 'PCS', imageUrl: 'images/cleaningSponge.jpg', maxQuantity: 4, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'whiteGarbageBagRoll10Gallon', name: 'White Garbage Bag Roll 10 Gallon | أكياس بلدية رول ابيض 10 جالون', unit: 'BKT', imageUrl: 'images/whiteGarbageBagRoll10Gallon.jpg', maxQuantity: 1, description: 'Baket = 5 Roll | باكت 5 رول' },
+            { id: 'blackGarbageBagRoll50Gallon', name: 'Black Garbage Bag Roll 50 Gallon | اكياس بلدية رول اسود 50 جالون', unit: 'BKT', imageUrl: 'images/blackGarbageBagRoll50Gallon.jpg', maxQuantity: 2, description: 'Baket = 10 Roll | باكت 10 رول' },
+            { id: 'sanitaInterfoldCoarseWipes', name: 'Sanita Interfold Coarse Wipes | مناديل سانيتا', unit: 'Carton', imageUrl: 'images/sanitaInterfoldCoarseWipes.jpg', maxQuantity: 3, description: 'Carton = 18 Paket | كرتون 18 باكت' },
+            { id: 'blueRollTissues', name: 'Blue Roll Tissues | مناديل رول أزرق', unit: 'Roll', imageUrl: 'images/blueRollTissues.jpg', maxQuantity: 1, description: 'Roll = 375 sheets | الرول 375 شيت' },
+            { id: 'MopHeadRefill', name: 'Mop Head Refill | غيار ممسحة موب', unit: 'PCS', imageUrl: 'images/MopHeadRefill.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'DishwashingLiquid', name: 'Dishwashing Liquid | سائل غسيل صحون', unit: 'PCS', imageUrl: 'images/DishwashingLiquid.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'alEmlaqSuperGel', name: 'Al Emlaq Super Gel | العملاق جيل', unit: 'PCS', imageUrl: 'images/alEmlaqSuperGel.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' }
+        ],
+        beverage: [
+            { id: 'nestleCondensedMilk', name: 'Nestlé Sweetened Condensed Milk |حليب مكثف نستله ', unit: 'CTN', imageUrl: 'images/nestle_condensed_milk.jpg', maxQuantity: 1, description: 'Carton = 48 Pieces | كرتون 48 قطعة' },
+            { id: 'jevanSugarcaneSyrup', name: 'Jevan Sugarcane Syrup | سكر سيرب (سكر قصب) جفان 1000 مل', unit: 'BTL', imageUrl: 'images/jevan_sugarcane_syrup.jpg', maxQuantity: 1, description: 'Carton = 4 BTL | كرتون 4 عبوة' },
+            { id: 'alproAlmondMilk', name: 'Alpro Almond Milk | حليب البرو عضوي لوز باريستا', unit: 'BTL', imageUrl: 'images/alpro_almond_milk.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'alproCoconutMilk', name: 'Alpro Coconut Milk | حليب البرو عضوي كوكنت باريستا', unit: 'PC', imageUrl: 'images/alpro_coconut_milk.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'alMaraiWhippingCream', name: 'Al Marai Whipping Cream | كريمة خفق المراعي', unit: 'PC', imageUrl: 'images/al_marai_whipping_cream.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'twiningsEnglishBreakfastTea', name: 'Twinings English Breakfast Tea | شاي توينجز احمر', unit: 'BKT', imageUrl: 'images/twinings_english_breakfast_tea.jpg', maxQuantity: 1, description: 'BKT = 50 Pieces | باكت 50 قطعة' },
+            { id: 'twiningsPureGreenTea', name: 'Twinings Pure Green Tea | شاي توينجز اخضر', unit: 'BKT', imageUrl: 'images/twinings_pure_green_tea.jpg', maxQuantity: 1, description: 'BKT = 50 Pieces | باكت 50 قطعة' },
+            { id: 'whiteSugarSachets', name: 'White Sugar Sachets | سكر شفرات باكت ابيض', unit: 'CTN', imageUrl: 'images/white_sugar_sachets.jpg', maxQuantity: 1, description: 'CTN = 1000 Pieces | كرتون 1000 حبة' },
+            { id: 'brownSugarSachets', name: 'Brown Sugar Sachets | سكر شفرات باكت بني', unit: 'CTN', imageUrl: 'images/brown_sugar_sachets.jpg', maxQuantity: 1, description: 'CTN = 1000 Pieces | كرتون 1000 حبة' },
+            { id: 'steviaDietSugar', name: 'Stevia Diet Sugar | سكر ستيفيا دايت', unit: 'BKT', imageUrl: 'images/stevia_diet_sugar.jpg', maxQuantity: 1, description: 'BKT = 100 Pieces | باكت 100 حبة' },
+            { id: 'matchaGreenTeaPowder', name: 'Matcha Green Tea Powder | ماتشا', unit: 'KG', imageUrl: 'images/matcha_green_tea_powder.jpg', maxQuantity: 1, description: 'Matcha green tea powder' },
+            { id: 'dryBlueberry', name: 'Dry Blueberry | توت مجفف', unit: 'KG', imageUrl: 'images/dry_blueberry.jpg', maxQuantity: 1, description: 'Dry blueberry' },
+            { id: 'dryOrange', name: 'Dry Orange | برتقال مجفف', unit: 'KG', imageUrl: 'images/dry_orange.jpg', maxQuantity: 1, description: 'Dry orange' },
+            { id: 'sugar10k', name: 'Sugar 10 kg | سكرغير مغلف 10 ك', unit: 'KG', imageUrl: 'images/sugar_10k.jpg', maxQuantity: 1, description: '10 kg bag of sugar' },
+            { id: 'redCherry', name: 'Red Cherry | كرز مجفف', unit: 'KG', imageUrl: 'images/red_cherry.jpg', maxQuantity: 1, description: 'Red cherry' },
+            { id: 'rawRoselle', name: 'Raw Roselle | كركديه خام', unit: 'KG', imageUrl: 'images/raw_roselle.jpg', maxQuantity: 1, description: 'Raw roselle' },
+            { id: 'mint', name: 'Mint | نعناع', unit: 'PACK', imageUrl: 'images/mint.jpg', maxQuantity: 1, description: 'Mint' },
+            { id: 'lemon', name: 'Lemon | ليمون', unit: '،KG', imageUrl: 'images/lemon.jpg', maxQuantity: 1, description: 'Lemon' }
+        ]
+    };
 
 
 const sweetInventory = {
@@ -106,7 +126,7 @@ const sweetInventory = {
             'Friday': 13, 'Saturday': 16, 'Sunday': 11, 'Monday': 18, 'Tuesday': 9, 'Wednesday': 13, 'Thursday': 19, 'imageUrl': 'images/chocolate_cookies.jpg'
         },
         'Chocolate Hazeinut - بودنق الشوكلاته': {
-            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg', dozen: true
+            'Friday': 3, 'Saturday': 2, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg', dozen: true
         },
         'Cinnabon - سينابون': {
             'Friday': 19, 'Saturday': 12, 'Sunday': 8, 'Monday': 11, 'Tuesday': 7, 'Wednesday': 9, 'Thursday': 23, 'imageUrl': 'images/cinnabon.jpg'
@@ -115,7 +135,7 @@ const sweetInventory = {
             'Friday': 6, 'Saturday': 4, 'Sunday': 4, 'Monday': 3, 'Tuesday': 4, 'Wednesday': 1, 'Thursday': 7, 'imageUrl': 'images/creme_brulee.jpg'
         },
         'Date with Cheese - سخان تشيز التمر': {
-            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
+            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
         },
         'Hazelnut dates and pecans - بودنق التمر والبيكان': {
             'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
@@ -150,11 +170,11 @@ const sweetInventory = {
     }
 };
 
-// Selected items storage
 const selectedItems = {
     cupsLids: {},
     filters: {},
-    consumable: {}
+    consumable: {},
+    beverage: {}
 };
 
 // Selected sweet items storage
@@ -245,12 +265,10 @@ function removeItem(category, itemId) {
 }
 
 function updateDisplay() {
-    // Update Cups & Lids section
     updateCategoryDisplay('cupsLids', 'cupsLidsItems');
-    // Update Filters section
     updateCategoryDisplay('filters', 'filtersItems');
-    // Update Cleaning Materials section
     updateCategoryDisplay('consumable', 'consumableItems');
+    updateCategoryDisplay('beverage', 'beverageItems');
 }
 
 function updateCategoryDisplay(category, containerId) {
