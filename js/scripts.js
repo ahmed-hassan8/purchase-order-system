@@ -135,7 +135,7 @@ const sweetInventory = {
             'Friday': 6, 'Saturday': 4, 'Sunday': 4, 'Monday': 3, 'Tuesday': 4, 'Wednesday': 1, 'Thursday': 7, 'imageUrl': 'images/creme_brulee.jpg'
         },
         'Date with Cheese - سخان تشيز التمر': {
-            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
+            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
         },
         'Hazelnut dates and pecans - بودنق التمر والبيكان': {
             'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
@@ -536,7 +536,12 @@ function submitSweetOrder() {
 
 function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetItems) {
     const orderQuantity = sweetItems[itemName][orderDayOfWeek];
-    let adjustedQuantity = orderQuantity;
+    let adjustedQuantity = orderQuantity - inventoryOnHand;
+
+    // Ensure the adjusted quantity is not negative
+    if (adjustedQuantity < 0) {
+        adjustedQuantity = 0;
+    }
 
     // Check if the item has the dozen property
     if (sweetItems[itemName].dozen) {
@@ -547,8 +552,6 @@ function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetIte
             // Else keep the default order quantity
             adjustedQuantity = orderQuantity;
         }
-    } else {
-        adjustedQuantity = orderQuantity;
     }
 
     return adjustedQuantity;
