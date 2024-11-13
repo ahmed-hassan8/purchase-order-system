@@ -570,6 +570,7 @@ function getNextDayOfWeek(currentDay) {
     return daysOfWeek[nextIndex];
 }
 
+
 function generateSweetOrderPDF(orderDate) {
     const branch = document.getElementById('branch').value;
     const username = document.getElementById('username').value;
@@ -591,7 +592,7 @@ function generateSweetOrderPDF(orderDate) {
         const th = document.createElement('th');
         th.style.border = '1px solid #000';
         th.style.padding = '8px';
-        th.style.backgroundColor = '#7BA084';
+        th.style.backgroundColor = '#7BA084'; // Primary Green
         th.style.color = '#fff';
         th.innerText = headerText;
         headerRow.appendChild(th);
@@ -613,6 +614,25 @@ function generateSweetOrderPDF(orderDate) {
 
     pdfSweetItemsContainer.appendChild(table);
 
+    // Add footer after the table
+    const footer = document.createElement('div');
+    footer.style.display = 'flex';
+    footer.style.justifyContent = 'space-between';
+    footer.style.padding = '10px';
+    footer.style.backgroundColor = '#466564'; // Secondary Green
+    footer.style.color = '#fff';
+    footer.style.fontWeight = 'lighter'; // Thinner font
+    footer.style.fontSize = '12px'; // Smaller font
+    footer.style.width = '100%';
+
+    const leftText = document.createElement('span');
+    leftText.innerText = 'Business Manager - Ahmed Hassan | Ons Coffee';
+    leftText.style.color = '#fff'; // White color
+
+    footer.appendChild(leftText);
+
+    pdfSweetItemsContainer.appendChild(footer);
+
     const printableSweetOrder = document.getElementById('printableSweetOrder');
     printableSweetOrder.style.display = 'block';
 
@@ -626,6 +646,7 @@ function generateSweetOrderPDF(orderDate) {
         printableSweetOrder.style.display = 'none';
     });
 }
+
 function getDayOfWeek(date) {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dayIndex = date.getDay();
