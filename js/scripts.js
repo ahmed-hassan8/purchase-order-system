@@ -42,6 +42,7 @@ const inventoryItems = {
             { id: 'blueRollTissues', name: 'Blue Roll Tissues | مناديل رول أزرق', unit: 'Roll', imageUrl: 'images/blueRollTissues.jpg', maxQuantity: 1, description: 'Roll = 375 sheets | الرول 375 شيت' },
             { id: 'MopHeadRefill', name: 'Mop Head Refill | غيار ممسحة موب', unit: 'PCS', imageUrl: 'images/MopHeadRefill.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
             { id: 'DishwashingLiquid', name: 'Dishwashing Liquid | سائل غسيل صحون', unit: 'PCS', imageUrl: 'images/DishwashingLiquid.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
+            { id: 'Facemask', name: 'Face Mask |ماسك وجه', unit: 'CTN', imageUrl: 'images/Facemask.jpg', maxQuantity: 1, description: 'CTN = 10 BKT |  10 باكت' },
             { id: 'alEmlaqSuperGel', name: 'Al Emlaq Super Gel | العملاق جيل', unit: 'PCS', imageUrl: 'images/alEmlaqSuperGel.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' }
         ],
         beverage: [
