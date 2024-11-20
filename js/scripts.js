@@ -19,7 +19,7 @@ const inventoryItems = {
     ],
     filters: [
         { id: 'ColdBrew', name: 'Cold Brew Filter Bag | فلتر كولد برو كركدية', unit: 'BKT', imageUrl: 'images/ColdBrew.jpg' ,maxQuantity: 1, description: 'BKT = 50 Filters | باكت 50 فلتر'},
-        { id: 'CoffeeFilters', name: 'FETCO Coffee Filters | فلتر قهوةاليوم فيتكو مقاس 13', unit: 'CTN', imageUrl: 'images/CoffeeFilters.jpg',maxQuantity: 1, description: 'Carton = 500 Filters | كرتون 500 فلتر' }
+        { id: 'CoffeeFilters', name: 'FETCO Coffee Filters | فلتر قهوةاليوم فيتكو مقاس 13', unit: 'CTN', imageUrl: 'images/CoffeeFilters.jpg',maxQuantity: 1, description: 'Carton = 500 Filters | كرتون 500 فلتر' },
         { id: 'CafettoEspressoCleaner', name: 'Cafetto Espresso Cleaner |  منظف الة الاسبريسو كفيتو أحمر لتر', unit: 'PC', imageUrl: 'images/CafettoEspressoCleaner.jpg',maxQuantity: 1, description: 'PC = 1 Litter | حبة 1 لتر' }
     ],
         consumable: [
