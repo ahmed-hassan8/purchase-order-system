@@ -120,19 +120,19 @@ const sweetInventory = {
     },
     'Aqiq': {
         'Banana cake - كيكة الموز': {
-            'Friday': 4, 'Saturday': 5, 'Sunday': 3, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 6, 'imageUrl': 'images/banana_cake.jpg'
+            'Friday': 6, 'Saturday': 6, 'Sunday': 6, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 6, 'Thursday': 6, 'imageUrl': 'images/banana_cake.jpg'
         },
         'Big Cookies - كوكيز كبير': {
-            'Friday': 19, 'Saturday': 9, 'Sunday': 8, 'Monday': 10, 'Tuesday': 9, 'Wednesday': 13, 'Thursday': 9, 'imageUrl': 'images/big_cookies.jpg'
+            'Friday': 19, 'Saturday': 10, 'Sunday': 10, 'Monday': 10, 'Tuesday': 10, 'Wednesday': 13, 'Thursday': 10, 'imageUrl': 'images/big_cookies.jpg'
         },
         'Chocolate Cookies - كوكيز': {
-            'Friday': 14, 'Saturday': 14, 'Sunday': 13, 'Monday': 11, 'Tuesday': 10, 'Wednesday': 13, 'Thursday': 19, 'imageUrl': 'images/chocolate_cookies.jpg'
+            'Friday': 15, 'Saturday': 15, 'Sunday': 15, 'Monday': 15, 'Tuesday': 15, 'Wednesday': 15, 'Thursday': 19, 'imageUrl': 'images/chocolate_cookies.jpg'
         },
         'Chocolate Hazeinut - بودنق الشوكلاته': {
             'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg', dozen: true
         },
         'Cinnabon - سينابون': {
-            'Friday': 20, 'Saturday': 11, 'Sunday': 6, 'Monday': 10, 'Tuesday': 8, 'Wednesday': 10, 'Thursday': 15, 'imageUrl': 'images/cinnabon.jpg'
+            'Friday': 20, 'Saturday': 11, 'Sunday': 10, 'Monday': 12, 'Tuesday': 10, 'Wednesday': 10, 'Thursday': 15, 'imageUrl': 'images/cinnabon.jpg'
         },
         'Creme brulee - كريم بروليه': {
             'Friday': 6, 'Saturday': 4, 'Sunday': 4, 'Monday': 3, 'Tuesday': 3, 'Wednesday': 4, 'Thursday': 6, 'imageUrl': 'images/creme_brulee.jpg'
@@ -150,22 +150,22 @@ const sweetInventory = {
             'Friday': 6, 'Saturday': 6, 'Sunday': 4, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 3, 'Thursday': 5, 'imageUrl': 'images/latte_cake.jpg'
         },
         'Lemon Cake - كيكة ليمون': {
-            'Friday': 7, 'Saturday': 5, 'Sunday': 6, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 3, 'Thursday': 4, 'imageUrl': 'images/lemon_cake.jpg'
+            'Friday': 7, 'Saturday': 6, 'Sunday': 6, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 6, 'Thursday': 6, 'imageUrl': 'images/lemon_cake.jpg'
         },
         'Magic bar coconut - بار جوز الهند': {
-            'Friday': 5, 'Saturday': 6, 'Sunday': 6, 'Monday': 6, 'Tuesday': 8, 'Wednesday': 8, 'Thursday': 9, 'imageUrl': 'images/magic_bar_coconut.jpg'
+            'Friday': 9, 'Saturday': 9, 'Sunday': 9, 'Monday': 9, 'Tuesday': 9, 'Wednesday': 9, 'Thursday': 9, 'imageUrl': 'images/magic_bar_coconut.jpg'
         },
         'Brownies - براونيز': {
-            'Friday': 6, 'Saturday': 7, 'Sunday': 4, 'Monday': 5, 'Tuesday': 6, 'Wednesday': 3, 'Thursday': 7, 'imageUrl': 'images/brownies.jpg'
+            'Friday': 7, 'Saturday': 7, 'Sunday': 7, 'Monday': 7, 'Tuesday': 7, 'Wednesday': 7, 'Thursday': 7, 'imageUrl': 'images/brownies.jpg'
         },
         'Chocolate cake - تشوكلت كيك': {
             'Friday': 8, 'Saturday': 7, 'Sunday': 5, 'Monday': 3, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 8, 'imageUrl': 'images/chocolate_cake.jpg'
         },
         'Magic bar Loz - بار اللوز': {
-            'Friday': 6, 'Saturday': 8, 'Sunday': 7, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 8, 'imageUrl': 'images/magic_bar_loz.jpg'
+            'Friday': 8, 'Saturday': 8, 'Sunday': 8, 'Monday': 8, 'Tuesday': 8, 'Wednesday': 8, 'Thursday': 8, 'imageUrl': 'images/magic_bar_loz.jpg'
         },
         'Marble cake - ماربل كيك': {
-            'Friday': 6, 'Saturday': 3, 'Sunday': 6, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/marble_cake.jpg'
+            'Friday': 6, 'Saturday': 6, 'Sunday': 6, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 6, 'Thursday': 7, 'imageUrl': 'images/marble_cake.jpg'
         },
         'Tiramisu cacke - تيرامسيو كيك': {
             'Friday': 7, 'Saturday': 7, 'Sunday': 4, 'Monday': 4, 'Tuesday': 6, 'Wednesday': 5, 'Thursday': 10, 'imageUrl': 'images/tiramisu_cake.jpg'
@@ -548,8 +548,8 @@ function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetIte
 
     // Check if the item has the dozen property
     if (sweetItems[itemName].dozen) {
-        if (inventoryOnHand >= 5) {
-            // Reduce by 1 if on hand quantity >= 5
+        if (inventoryOnHand >= 7) {
+            // Reduce by 1 if on hand quantity >= 7
             adjustedQuantity = orderQuantity - 1;
         } else {
             // Else keep the default order quantity
