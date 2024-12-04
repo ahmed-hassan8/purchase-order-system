@@ -20,7 +20,7 @@ const inventoryItems = {
         { id: 'ColdBrew', name: 'Cold Brew Filter Bag | فلتر كولد برو كركدية', unit: 'BKT', imageUrl: 'images/ColdBrew.jpg' ,maxQuantity: 1, description: 'BKT = 50 Filters | باكت 50 فلتر'},
         { id: 'CoffeeFilters', name: 'FETCO Coffee Filters | فلتر قهوةاليوم فيتكو مقاس 13', unit: 'CTN', imageUrl: 'images/CoffeeFilters.jpg',maxQuantity: 1, description: 'Carton = 500 Filters | كرتون 500 فلتر' },
         { id: 'CafettoEspressoCleaner', name: 'Cafetto Espresso Cleaner |  منظف الة الاسبريسو كفيتو أحمر لتر', unit: 'PC', imageUrl: 'images/CafettoEspressoCleaner.jpg',maxQuantity: 1, description: 'PC = 1 Litter | حبة 1 لتر' },
-        { id: 'V60CoffeeServer', name: ' سيرفر تقطير V60 - 02 | 02 - V60 Coffee Server 600ml', unit: 'PC', imageUrl: 'images/V60CoffeeServer.jpg' ,maxQuantity: 2, description: 'PC | حبة'},
+        { id: 'V60CoffeeServer', name: '600 مل سيرفر تقطير V60 - 02 - 600 | 02 - V60 Coffee Server 600ml', unit: 'PC', imageUrl: 'images/V60CoffeeServer.jpg' ,maxQuantity: 2, description: 'PC | حبة'},
         { id: 'CafizaEspresooMachine', name: 'أقراص تنظيف مكائن القهوة كافيزا | Cafiza Espresoo Machine Cleaning Bills', unit: 'Baket', imageUrl: 'images/CafizaEspresooMachine.jpg' ,maxQuantity: 1, description: '100 Bills | 100 حبة'},
     ],
         consumable: [
