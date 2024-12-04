@@ -21,7 +21,7 @@ const inventoryItems = {
         { id: 'CoffeeFilters', name: 'FETCO Coffee Filters | فلتر قهوةاليوم فيتكو مقاس 13', unit: 'CTN', imageUrl: 'images/CoffeeFilters.jpg',maxQuantity: 1, description: 'Carton = 500 Filters | كرتون 500 فلتر' },
         { id: 'CafettoEspressoCleaner', name: 'Cafetto Espresso Cleaner |  منظف الة الاسبريسو كفيتو أحمر لتر', unit: 'PC', imageUrl: 'images/CafettoEspressoCleaner.jpg',maxQuantity: 1, description: 'PC = 1 Litter | حبة 1 لتر' },
         { id: 'V60CoffeeServer', name: 'V60 Coffee Server 600ml - 02  | ڤي سكستي سيرفر 02 - حجم  600  مل ', unit: 'PC', imageUrl: 'images/V60CoffeeServer.jpg' ,maxQuantity: 2, description: 'PC | حبة'},
-        { id: 'CafizaEspresooMachine', name: 'أقراص تنظيف مكائن القهوة كافيزا | Cafiza Espresoo Machine Cleaning Bills', unit: 'Baket', imageUrl: 'images/CafizaEspresooMachine.jpg' ,maxQuantity: 1, description: '100 Bills | 100 حبة'},
+        { id: 'CafizaEspresooMachine', name: 'Cafiza Espresoo Machine Cleaning Bills |  أقراص تنظيف مكائن القهوة كافيزا ', unit: 'Baket', imageUrl: 'images/CafizaEspresooMachine.jpg' ,maxQuantity: 1, description: '100 Bills | 100 حبة'},
     ],
         consumable: [
             { id: 'coveredPlasticFork', name: 'Covered Plastic Fork | شوكة بلاستيك مغلفة', unit: 'Carton', imageUrl: 'images/coveredPlasticFork.jpg', maxQuantity: 1, description: 'Carton = 1000 Fork | كرتون 1000 شوكة' },
