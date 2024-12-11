@@ -2,6 +2,7 @@
 
 const inventoryItems = {
     cupsLids: [
+        { id: 'cup4oz', name: 'Cup 4OZ | كوب 4 اونص', unit: 'Carton', imageUrl: 'images/cup4oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 cups | كرتون 1000 كوب'},
         { id: 'cup7oz', name: 'Cup 7OZ | كوب 7 اونص', unit: 'Carton', imageUrl: 'images/cup7oz.jpg' ,maxQuantity: 1 , description: 'Carton = 1000 cups | كرتون 1000 كوب'},
         { id: 'cuplid7oz', name: 'Cuplid 7OZ | غطاء 7 اونص', unit: 'Carton', imageUrl: 'images/cuplid7oz.jpg' ,maxQuantity: 1, description: 'Carton = 1000 Lids | كرتون 1000 غطاء'},
         { id: 'cup9oz', name: 'Cup 9OZ | كوب 9 اونص', unit: 'Carton', imageUrl: 'images/cup9oz.jpg' ,maxQuantity: 2 , description: 'Carton = 500 Cups | كرتون 500 كوب' },
