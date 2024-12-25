@@ -143,7 +143,7 @@ const sweetInventory = {
             'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
         },
         'Hazelnut dates and pecans - بودنق التمر والبيكان': {
-            'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
+            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
         },
         'Lamington - لامنغتون': {
             'Friday': 22, 'Saturday': 18, 'Sunday': 14, 'Monday': 10, 'Tuesday': 10, 'Wednesday': 14, 'Thursday': 16, 'imageUrl': 'images/lamington.jpg'
