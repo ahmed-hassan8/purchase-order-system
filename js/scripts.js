@@ -76,7 +76,7 @@ const inventoryItems = {
 const sweetInventory = {
     'Al-Nafl': {
         'Banana cake - كيكة الموز': {
-            'Friday': 5, 'Saturday': 5, 'Sunday': 5, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 7, 'Thursday': 6, 'imageUrl': 'images/banana_cake.jpg'
+            'Friday': 5, 'Saturday': 4, 'Sunday': 2, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/banana_cake.jpg'
         },
         'Chocolate Cookies - كوكيز': {
             'Friday': 20, 'Saturday': 17, 'Sunday': 17, 'Monday': 16, 'Tuesday': 14, 'Wednesday': 19, 'Thursday': 26, 'imageUrl': 'images/chocolate_cookies.jpg'
