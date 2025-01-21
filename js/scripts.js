@@ -79,10 +79,10 @@ const sweetInventory = {
             'Friday': 5, 'Saturday': 4, 'Sunday': 2, 'Monday': 5, 'Tuesday': 5, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/banana_cake.jpg'
         },
         'Chocolate Cookies - كوكيز': {
-            'Friday': 20, 'Saturday': 17, 'Sunday': 17, 'Monday': 16, 'Tuesday': 14, 'Wednesday': 19, 'Thursday': 26, 'imageUrl': 'images/chocolate_cookies.jpg'
+            'Friday': 21, 'Saturday': 13, 'Sunday': 16, 'Monday': 17, 'Tuesday': 11, 'Wednesday': 18, 'Thursday': 21, 'imageUrl': 'images/chocolate_cookies.jpg'
         },
         'Cinnabon - سينابون': {
-            'Friday': 5, 'Saturday': 4, 'Sunday': 6, 'Monday': 4, 'Tuesday': 3, 'Wednesday': 3, 'Thursday': 8, 'imageUrl': 'images/cinnabon.jpg'
+            'Friday': 6, 'Saturday': 5, 'Sunday': 4, 'Monday': 5, 'Tuesday': 2, 'Wednesday': 4, 'Thursday': 7, 'imageUrl': 'images/cinnabon.jpg'
         },
         'Creme brulee - كريم بروليه': {
             'Friday': 3, 'Saturday': 2, 'Sunday': 1, 'Monday': 2, 'Tuesday': 3, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/creme_brulee.jpg'
