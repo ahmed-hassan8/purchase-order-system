@@ -85,7 +85,7 @@ const sweetInventory = {
             'Friday': 6, 'Saturday': 5, 'Sunday': 4, 'Monday': 5, 'Tuesday': 2, 'Wednesday': 4, 'Thursday': 7, 'imageUrl': 'images/cinnabon.jpg'
         },
         'Creme brulee - كريم بروليه': {
-            'Friday': 3, 'Saturday': 2, 'Sunday': 1, 'Monday': 2, 'Tuesday': 3, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/creme_brulee.jpg'
+            'Friday': 3, 'Saturday': 3, 'Sunday': 1, 'Monday': 3, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 3, 'imageUrl': 'images/creme_brulee.jpg'
         },
         'Date with Cheese - سخان تشيز التمر': {
             'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
@@ -94,13 +94,13 @@ const sweetInventory = {
             'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
         },
         'Lamington - لامنغتون': {
-            'Friday': 10, 'Saturday': 12, 'Sunday': 12, 'Monday': 6, 'Tuesday': 10, 'Wednesday': 10, 'Thursday': 12, 'imageUrl': 'images/lamington.jpg'
+            'Friday': 10, 'Saturday': 10, 'Sunday': 8, 'Monday': 8, 'Tuesday': 4, 'Wednesday': 10, 'Thursday': 14, 'imageUrl': 'images/lamington.jpg'
         },
         'Latte cake - لاتيه كيك': {
-            'Friday': 7, 'Saturday': 4, 'Sunday': 4, 'Monday': 4, 'Tuesday': 5, 'Wednesday': 4, 'Thursday': 7, 'imageUrl': 'images/latte_cake.jpg'
+            'Friday': 6, 'Saturday': 4, 'Sunday': 2, 'Monday': 2, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 7, 'imageUrl': 'images/latte_cake.jpg'
         },
         'Lemon Cake - كيكة ليمون': {
-            'Friday': 4, 'Saturday': 5, 'Sunday': 7, 'Monday': 5, 'Tuesday': 6, 'Wednesday': 6, 'Thursday': 6, 'imageUrl': 'images/lemon_cake.jpg'
+            'Friday': 5, 'Saturday': 6, 'Sunday': 5, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 4, 'Thursday': 3, 'imageUrl': 'images/lemon_cake.jpg'
         },
         'Magic bar coconut - بار جوز الهند': {
             'Friday': 10, 'Saturday': 7, 'Sunday': 7, 'Monday': 7, 'Tuesday': 5, 'Wednesday': 8, 'Thursday': 10, 'imageUrl': 'images/magic_bar_coconut.jpg'
