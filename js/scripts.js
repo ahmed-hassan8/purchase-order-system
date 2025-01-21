@@ -103,22 +103,22 @@ const sweetInventory = {
             'Friday': 5, 'Saturday': 6, 'Sunday': 5, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 4, 'Thursday': 3, 'imageUrl': 'images/lemon_cake.jpg'
         },
         'Magic bar coconut - بار جوز الهند': {
-            'Friday': 10, 'Saturday': 7, 'Sunday': 7, 'Monday': 7, 'Tuesday': 5, 'Wednesday': 8, 'Thursday': 10, 'imageUrl': 'images/magic_bar_coconut.jpg'
+            'Friday': 10, 'Saturday': 6, 'Sunday': 5, 'Monday': 7, 'Tuesday': 4, 'Wednesday': 7, 'Thursday': 11, 'imageUrl': 'images/magic_bar_coconut.jpg'
         },
         'Brownies - براونيز': {
-            'Friday': 9, 'Saturday': 6, 'Sunday': 3, 'Monday': 6, 'Tuesday': 6, 'Wednesday': 7, 'Thursday': 10, 'imageUrl': 'images/brownies.jpg'
+            'Friday': 10, 'Saturday': 4, 'Sunday': 1, 'Monday': 6, 'Tuesday': 3, 'Wednesday': 6, 'Thursday': 8, 'imageUrl': 'images/brownies.jpg'
         },
         'Chocolate cake - تشوكلت كيك': {
-            'Friday': 6, 'Saturday': 3, 'Sunday': 3, 'Monday': 3, 'Tuesday': 2, 'Wednesday': 5, 'Thursday': 6, 'imageUrl': 'images/chocolate_cake.jpg'
+            'Friday': 7, 'Saturday': 3, 'Sunday': 4, 'Monday': 3, 'Tuesday': 2, 'Wednesday': 5, 'Thursday': 6, 'imageUrl': 'images/chocolate_cake.jpg'
         },
         'Magic bar Loz - بار اللوز': {
-            'Friday': 5, 'Saturday': 8, 'Sunday': 5, 'Monday': 8, 'Tuesday': 9, 'Wednesday': 7, 'Thursday': 7, 'imageUrl': 'images/magic_bar_loz.jpg'
+            'Friday': 6, 'Saturday': 7, 'Sunday': 6, 'Monday': 4, 'Tuesday': 10, 'Wednesday': 6, 'Thursday': 7, 'imageUrl': 'images/magic_bar_loz.jpg'
         },
         'Marble cake - ماربل كيك': {
-            'Friday': 6, 'Saturday': 5, 'Sunday': 5, 'Monday': 7, 'Tuesday': 8, 'Wednesday': 5, 'Thursday': 9, 'imageUrl': 'images/marble_cake.jpg'
+            'Friday': 7, 'Saturday': 6, 'Sunday': 6, 'Monday': 7, 'Tuesday': 6, 'Wednesday': 7, 'Thursday': 7, 'imageUrl': 'images/marble_cake.jpg'
         },
         'Tiramisu cacke - تيرامسيو كيك': {
-            'Friday': 7, 'Saturday': 4, 'Sunday': 2, 'Monday': 5, 'Tuesday': 4, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/tiramisu_cake.jpg'
+            'Friday': 8, 'Saturday': 3, 'Sunday': 3, 'Monday': 4, 'Tuesday': 4, 'Wednesday': 3, 'Thursday': 7, 'imageUrl': 'images/tiramisu_cake.jpg'
         }
     },
     'Aqiq': {
