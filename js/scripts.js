@@ -551,7 +551,7 @@ function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetIte
 
     // Check if the item has the dozen property
     if (sweetItems[itemName].dozen) {
-        let threshold = 5; // Default threshold for most dozen items
+        let threshold = 4; // Default threshold for most dozen items
         // Special case for 'Date with Cheese'
         if (itemName === 'Date with Cheese - سخان تشيز التمر') {
             threshold = 6;
