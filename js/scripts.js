@@ -549,32 +549,20 @@ function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetIte
         adjustedQuantity = 0;
     }
 
-function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetItems) {
-    const orderQuantity = sweetItems[itemName][orderDayOfWeek];
-    let adjustedQuantity = orderQuantity - inventoryOnHand;
-
-    // Ensure the adjusted quantity is not negative
-    if (adjustedQuantity < 0) {
-        adjustedQuantity = 0;
-    }
-
     // Check if the item has the dozen property
     if (sweetItems[itemName].dozen) {
-        let threshold = 6; // Default threshold for most dozen items
-        // Special case for 'Date with Cheese'
-        if (itemName === 'Date with Cheese - سخان تشيز التمر') {
-            threshold = 7;
-        }
-        
-        if (inventoryOnHand >= threshold) {
+        if (inventoryOnHand >= 7) {
+            // Reduce by 1 if on hand quantity >= 7
             adjustedQuantity = orderQuantity - 1;
         } else {
+            // Else keep the default order quantity
             adjustedQuantity = orderQuantity;
         }
     }
 
     return adjustedQuantity;
 }
+
 function getDayOfWeek(date) {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dayIndex = date.getDay();
