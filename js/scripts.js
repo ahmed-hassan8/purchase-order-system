@@ -551,8 +551,8 @@ function getAdjustedQuantity(itemName, inventoryOnHand, orderDayOfWeek, sweetIte
 
     // Check if the item has the dozen property
     if (sweetItems[itemName].dozen) {
-        if (inventoryOnHand >= 7) {
-            // Reduce by 1 if on hand quantity >= 7
+        if (inventoryOnHand >= 6) {
+            // Reduce by 1 if on hand quantity >= 6
             adjustedQuantity = orderQuantity - 1;
         } else {
             // Else keep the default order quantity
