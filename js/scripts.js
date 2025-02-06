@@ -34,7 +34,7 @@ const inventoryItems = {
             { id: 'cupHolder2', name: 'Cup Holder 2 | حامل اكواب جواد ورقية ٢ كوب', unit: 'CTN | كرتون', imageUrl: 'images/cupHolder2.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
             { id: 'cupHolder4', name: 'Cup Holder 4 | حامل اكواب ورقية ٤ كوب', unit: 'CTN | كرتون', imageUrl: 'images/cupHolder4.jpg', maxQuantity: 2, description: 'Carton = 250 Pieces | كرتون 250 قطعة' },
             { id: 'atmPaperRoll', name: 'ATM Paper Roll | ورق مكائن شبكة', unit: 'CTN | كرتون', imageUrl: 'images/atmPaperRoll.jpg', maxQuantity: 3, description: 'Bkt = 000 Pieces | باكت 000 ' },
-            { id: 'thermalPaperRoll70mm80mm', name: 'Thermal paper roll 70MM*80 | ورق رول كاشير70مم*80', unit: 'CTN | كرتون', imageUrl: 'images/thermalPaperRoll70mm80mm.jpg', maxQuantity: 1, description: 'Carton = 50 ٌRolls | كرتون 50 رول' },
+            { id: 'thermalPaperRoll70mm80mm', name: 'Thermal paper roll 70*80M | ورق رول كاشير70مم*80', unit: 'CTN | كرتون', imageUrl: 'images/thermalPaperRoll70mm80mm.jpg', maxQuantity: 1, description: 'Carton = 50 ٌRolls | كرتون 50 رول' },
             { id: 'floorDisinfectant30L', name: 'Floor Disinfectant 30L | مطهر أرضيات 30 لتر', unit: 'PC | حبة', imageUrl: 'images/floorDisinfectant30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
             { id: 'glassCleaner30L', name: 'Glass Cleaner 30L | منظف زجاج  30 لتر', unit: 'PC | حبة', imageUrl: 'images/glassCleaner30L.jpg', maxQuantity: 1, description: 'Gallon = 30 L | جالون 30 لتر' },
             { id: 'areonPerfumeSticks', name: 'Areon Perfume Sticks | اريون اعواد معطرة لافندر', unit: 'PC | حبة', imageUrl: 'images/areonPerfumeSticks.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
@@ -47,6 +47,7 @@ const inventoryItems = {
             { id: 'MopHeadRefill', name: 'Mop Head Refill | غيار ممسحة موب', unit: 'PC | حبة', imageUrl: 'images/MopHeadRefill.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
             { id: 'DishwashingLiquid', name: 'Dishwashing Liquid | سائل غسيل صحون', unit: 'PC | حبة', imageUrl: 'images/DishwashingLiquid.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
             { id: 'Facemask', name: 'Face Mask |ماسك وجه', unit: 'CTN | كرتون', imageUrl: 'images/Facemask.jpg', maxQuantity: 1, description: 'CTN = 10 BKT |  10 باكت' },
+            { id: 'coveredPlasticFork', name: 'Ons Stickers |ستيكر اونس', unit: 'ٍ Sheet | شيت', imageUrl: 'images/Onsstikers.jpg', maxQuantity: 1, description: 'Sheet = 100 PCS | حبة 100 شيت ' },
             { id: 'coveredPlasticFork', name: 'Ons Stickers |ستيكر اونس', unit: 'ٍ Sheet | شيت', imageUrl: 'images/Onsstikers.jpg', maxQuantity: 1, description: 'Sheet = 100 PCS | حبة 100 شيت ' },
             { id: 'alEmlaqSuperGel', name: 'Al Emlaq Super Gel | العملاق جيل', unit: 'PC | حبة', imageUrl: 'images/alEmlaqSuperGel.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' }
         ],
