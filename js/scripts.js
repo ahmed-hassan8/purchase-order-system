@@ -47,7 +47,7 @@ const inventoryItems = {
             { id: 'MopHeadRefill', name: 'Mop Head Refill | غيار ممسحة موب', unit: 'PC | حبة', imageUrl: 'images/MopHeadRefill.jpg', maxQuantity: 2, description: 'Piece = 1 Piece |  1 حبة' },
             { id: 'DishwashingLiquid', name: 'Dishwashing Liquid | سائل غسيل صحون', unit: 'PC | حبة', imageUrl: 'images/DishwashingLiquid.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' },
             { id: 'Facemask', name: 'Face Mask |ماسك وجه', unit: 'CTN | كرتون', imageUrl: 'images/Facemask.jpg', maxQuantity: 1, description: 'CTN = 10 BKT |  10 باكت' },
-             { id: 'coveredPlasticFork', name: 'Ons Stickers |ستيكر اونس', unit: 'ٍ Sheet | شيت', imageUrl: 'images/Onsstikers.jpg', maxQuantity: 1, description: 'Sheet = 100 PCS | حبة 100 شيت ' },
+            { id: 'coveredPlasticFork', name: 'Ons Stickers |ستيكر اونس', unit: 'ٍ Sheet | شيت', imageUrl: 'images/Onsstikers.jpg', maxQuantity: 1, description: 'Sheet = 100 PCS | حبة 100 شيت ' },
             { id: 'alEmlaqSuperGel', name: 'Al Emlaq Super Gel | العملاق جيل', unit: 'PC | حبة', imageUrl: 'images/alEmlaqSuperGel.jpg', maxQuantity: 1, description: 'Piece = 1 Piece |  1 حبة' }
         ],
         beverage: [
