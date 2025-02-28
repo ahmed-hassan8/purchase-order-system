@@ -125,37 +125,37 @@ const sweetInventory = {
     },
     'Aqiq': {
         'Banana cake - كيكة الموز': {
-            'Friday': 6, 'Saturday': 7, 'Sunday': 5, 'Monday': 5, 'Tuesday': 8, 'Wednesday': 7, 'Thursday': 3, 'imageUrl': 'images/banana_cake.jpg'
+            'Friday': 3, 'Saturday': 2, 'Sunday': 3, 'Monday': 1, 'Tuesday': 2, 'Wednesday': 2, 'Thursday': 2, 'imageUrl': 'images/banana_cake.jpg'
         },
         'Big Cookies - كوكيز كبير': {
-            'Friday': 15, 'Saturday': 9, 'Sunday': 15, 'Monday': 11, 'Tuesday': 14, 'Wednesday': 10, 'Thursday': 18, 'imageUrl': 'images/big_cookies.jpg'
+            'Friday': 8, 'Saturday': 6, 'Sunday': 6, 'Monday': 5, 'Tuesday':5, 'Wednesday': 6, 'Thursday': 8, 'imageUrl': 'images/big_cookies.jpg'
         },
         'Chocolate Cookies - كوكيز': {
-            'Friday': 20, 'Saturday': 15, 'Sunday': 10, 'Monday': 13, 'Tuesday': 12, 'Wednesday': 11, 'Thursday': 17, 'imageUrl': 'images/chocolate_cookies.jpg'
+            'Friday': 13, 'Saturday': 9, 'Sunday': 13, 'Monday': 8, 'Tuesday': 9, 'Wednesday': 10, 'Thursday': 14, 'imageUrl': 'images/chocolate_cookies.jpg'
         },
         'Chocolate Hazeinut - بودنق الشوكلاته': {
             'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/chocolate_hazelnut.jpg', dozen: true
         },
         'Cinnabon - سينابون': {
-            'Friday': 21, 'Saturday': 13, 'Sunday': 11, 'Monday': 9, 'Tuesday': 10, 'Wednesday': 11, 'Thursday': 12, 'imageUrl': 'images/cinnabon.jpg'
+            'Friday': 12, 'Saturday': 12, 'Sunday': 10, 'Monday': 10, 'Tuesday': 10, 'Wednesday': 11, 'Thursday': 12, 'imageUrl': 'images/cinnabon.jpg'
         },
         'Creme brulee - كريم بروليه': {
-            'Friday': 5, 'Saturday': 2, 'Sunday': 2, 'Monday': 2, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 4, 'imageUrl': 'images/creme_brulee.jpg'
+            'Friday': 3, 'Saturday': 2, 'Sunday': 2, 'Monday': 2, 'Tuesday': 2, 'Wednesday': 2, 'Thursday': 2, 'imageUrl': 'images/creme_brulee.jpg'
         },
         'Date with Cheese - سخان تشيز التمر': {
-            'Friday': 3, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/date_with_cheese.jpg', dozen: true
         },
         'Hazelnut dates and pecans - بودنق التمر والبيكان': {
-            'Friday': 2, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 2, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
+            'Friday': 1, 'Saturday': 1, 'Sunday': 1, 'Monday': 1, 'Tuesday': 1, 'Wednesday': 1, 'Thursday': 1, 'imageUrl': 'images/hazelnut_dates_pecans.jpg', dozen: true
         },
         'Lamington - لامنغتون': {
-            'Friday': 22, 'Saturday': 12, 'Sunday': 8, 'Monday': 10, 'Tuesday': 12, 'Wednesday': 12, 'Thursday': 18, 'imageUrl': 'images/lamington.jpg'
+            'Friday': 20, 'Saturday': 12, 'Sunday': 8, 'Monday': 10, 'Tuesday': 12, 'Wednesday': 12, 'Thursday': 14, 'imageUrl': 'images/lamington.jpg'
         },
         'Latte cake - لاتيه كيك': {
-            'Friday': 7, 'Saturday': 5, 'Sunday': 6, 'Monday': 4, 'Tuesday': 4, 'Wednesday': 4, 'Thursday': 5, 'imageUrl': 'images/latte_cake.jpg'
+            'Friday': 4, 'Saturday': 3, 'Sunday': 2, 'Monday': 3, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 3, 'imageUrl': 'images/latte_cake.jpg'
         },
         'Lemon Cake - كيكة ليمون': {
-            'Friday': 5, 'Saturday': 2, 'Sunday': 3, 'Monday': 5, 'Tuesday': 10, 'Wednesday': 3, 'Thursday': 8, 'imageUrl': 'images/lemon_cake.jpg'
+            'Friday': 3, 'Saturday': 2, 'Sunday': 3, 'Monday': 1, 'Tuesday': 2, 'Wednesday': 2, 'Thursday': 2, 'imageUrl': 'images/lemon_cake.jpg'
         },
         'Magic bar coconut - بار جوز الهند': {
             'Friday': 6, 'Saturday': 8, 'Sunday': 10, 'Monday': 9, 'Tuesday': 9, 'Wednesday': 7, 'Thursday': 5, 'imageUrl': 'images/magic_bar_coconut.jpg'
@@ -167,13 +167,13 @@ const sweetInventory = {
             'Friday': 9, 'Saturday': 6, 'Sunday': 5, 'Monday': 3, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 8, 'imageUrl': 'images/chocolate_cake.jpg'
         },
         'Magic bar Loz - بار اللوز': {
-            'Friday': 7, 'Saturday': 10, 'Sunday': 6, 'Monday':7, 'Tuesday': 10, 'Wednesday': 7, 'Thursday': 5, 'imageUrl': 'images/magic_bar_loz.jpg'
+            'Friday': 3, 'Saturday': 5, 'Sunday': 4, 'Monday':3, 'Tuesday': 4, 'Wednesday': 4, 'Thursday': 4, 'imageUrl': 'images/magic_bar_loz.jpg'
         },
         'Marble cake - ماربل كيك': {
-            'Friday': 5, 'Saturday': 6, 'Sunday': 6, 'Monday': 6, 'Tuesday': 5, 'Wednesday': 6, 'Thursday': 8, 'imageUrl': 'images/marble_cake.jpg'
+            'Friday': 4, 'Saturday': 2, 'Sunday': 5, 'Monday': 2, 'Tuesday': 2, 'Wednesday': 3, 'Thursday': 2, 'imageUrl': 'images/marble_cake.jpg'
         },
         'Tiramisu cacke - تيرامسيو كيك': {
-            'Friday': 7, 'Saturday': 6, 'Sunday': 5, 'Monday': 5, 'Tuesday': 6, 'Wednesday': 6, 'Thursday': 10, 'imageUrl': 'images/tiramisu_cake.jpg'
+            'Friday': 4, 'Saturday': 4, 'Sunday': 2, 'Monday': 3, 'Tuesday': 3, 'Wednesday': 3, 'Thursday': 4, 'imageUrl': 'images/tiramisu_cake.jpg'
         }
     }
 };
