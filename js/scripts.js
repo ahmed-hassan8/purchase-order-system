@@ -108,7 +108,7 @@ const sweetInventory = {
             'Friday': 11, 'Saturday': 7, 'Sunday': 6, 'Monday': 5, 'Tuesday': 4, 'Wednesday': 7, 'Thursday': 8, 'imageUrl': 'images/magic_bar_coconut.jpg'
         },
         'Brownies - براونيز': {
-            'Friday': 20, 'Saturday': 10, 'Sunday': 6, 'Monday': 8, 'Tuesday': 6, 'Wednesday': 10, 'Thursday': 14, 'imageUrl': 'images/brownies.jpg'
+            'Friday': 10, 'Saturday': 5, 'Sunday': 3, 'Monday': 4, 'Tuesday': 3, 'Wednesday': 5, 'Thursday': 7, 'imageUrl': 'images/brownies.jpg'
         },
         'Chocolate cake - تشوكلت كيك': {
             'Friday': 8, 'Saturday': 3, 'Sunday': 4, 'Monday': 3, 'Tuesday': 3, 'Wednesday': 4, 'Thursday': 6, 'imageUrl': 'images/chocolate_cake.jpg'
